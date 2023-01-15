@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "B2z-cB-lib"; */
+"B2z-cB-lib.normalTitle" = "تم";
+
+/* Class = "UIButton"; normalTitle = "Confirm Payment"; ObjectID = "LCv-sO-8vX"; */
+"LCv-sO-8vX.normalTitle" = "تأكيد الدفع";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "NTB-kp-7vx"; */
+"NTB-kp-7vx.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "QR CODE"; ObjectID = "QnS-Aq-GJ5"; */
+"QnS-Aq-GJ5.text" = "رمز الاستجابة السريعة";
+
+/* Class = "UILabel"; text = "PAYMENT"; ObjectID = "Zpk-II-hiZ"; */
+"Zpk-II-hiZ.text" = "دفع";
+
+/* Class = "UILabel"; text = "RECEIPT"; ObjectID = "cIX-aF-ZDr"; */
+"cIX-aF-ZDr.text" = "الإيصال";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "ghi-iI-jr9"; */
+"ghi-iI-jr9.placeholder" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "m6t-gs-ruJ"; */
+"m6t-gs-ruJ.text" = "تسجيل دخول";
+
+/* Class = "UITextField"; placeholder = "Mobile Number"; ObjectID = "s8C-BH-Kxh"; */
+"s8C-BH-Kxh.placeholder" = "رقم الهاتف";

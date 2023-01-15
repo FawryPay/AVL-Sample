@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "B2z-cB-lib"; */
+"B2z-cB-lib.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Confirm Payment"; ObjectID = "LCv-sO-8vX"; */
+"LCv-sO-8vX.normalTitle" = "Confirm Payment";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "NTB-kp-7vx"; */
+"NTB-kp-7vx.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "QR CODE"; ObjectID = "QnS-Aq-GJ5"; */
+"QnS-Aq-GJ5.text" = "QR CODE";
+
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "VY5-oM-HRA"; */
+"VY5-oM-HRA.configuration.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VY5-oM-HRA"; */
+"VY5-oM-HRA.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "RECEIPT"; ObjectID = "cIX-aF-ZDr"; */
+"cIX-aF-ZDr.text" = "RECEIPT";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "dcm-ye-LJw"; */
+"dcm-ye-LJw.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "ghi-iI-jr9"; */
+"ghi-iI-jr9.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "m6t-gs-ruJ"; */
+"m6t-gs-ruJ.text" = "Login";
+
+/* Class = "UITextField"; placeholder = "Mobile Number"; ObjectID = "s8C-BH-Kxh"; */
+"s8C-BH-Kxh.placeholder" = "Mobile Number";

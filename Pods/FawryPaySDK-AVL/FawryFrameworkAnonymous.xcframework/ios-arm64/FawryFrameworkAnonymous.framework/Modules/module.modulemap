@@ -1,0 +1,4 @@
+framework module FawryFrameworkAnonymous {
+  header "FawryFrameworkAnonymous-Swift.h"
+  requires objc
+}
