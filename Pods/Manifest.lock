@@ -1,48 +1,44 @@
 PODS:
   - Alamofire (5.6.4)
-  - FawryPaySDK-AVL (0.1.0):
+  - FawryPaySDK_AVL (0.1.9):
     - Alamofire (~> 5.6.4)
     - IQKeyboardManagerSwift (~> 6.5.11)
     - MBRadioButton (~> 1.4)
     - RxSwift (~> 6.5.0)
     - SDWebImage (~> 5.14.3)
-    - SVProgressHUD (~> 2.2.5)
     - SwiftMessages (~> 9.0.6)
-  - IQKeyboardManagerSwift (6.5.11)
+  - IQKeyboardManagerSwift (6.5.16)
   - MBRadioButton (1.4)
   - RxSwift (6.5.0)
   - SDWebImage (5.14.3):
     - SDWebImage/Core (= 5.14.3)
   - SDWebImage/Core (5.14.3)
-  - SVProgressHUD (2.2.5)
-  - SwiftMessages (9.0.6):
-    - SwiftMessages/App (= 9.0.6)
-  - SwiftMessages/App (9.0.6)
+  - SwiftMessages (9.0.9):
+    - SwiftMessages/App (= 9.0.9)
+  - SwiftMessages/App (9.0.9)
 
 DEPENDENCIES:
-  - FawryPaySDK-AVL
+  - FawryPaySDK_AVL
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - FawryPaySDK-AVL
+    - FawryPaySDK_AVL
     - IQKeyboardManagerSwift
     - MBRadioButton
     - RxSwift
     - SDWebImage
-    - SVProgressHUD
     - SwiftMessages
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
-  FawryPaySDK-AVL: 403baa5ab1c91262d131a4dc470f94f897f05a0b
-  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  FawryPaySDK_AVL: 98c8f6d59b4b5ba51facb1a0021e0642eee7b016
+  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   MBRadioButton: dcf111c9bb633d4cf6e83200d804af6e025033c8
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: 9c36e66c8ce4620b41a7407698dda44211a96764
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftMessages: 1a23aef303fa7bb26ad802880746cf8358e378fe
 
-PODFILE CHECKSUM: f364dab5e13d7132f7969676c22e8bfbdafe1960
+PODFILE CHECKSUM: 2baf3fca9d253651e628d4eef9b3ef2722089abe
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

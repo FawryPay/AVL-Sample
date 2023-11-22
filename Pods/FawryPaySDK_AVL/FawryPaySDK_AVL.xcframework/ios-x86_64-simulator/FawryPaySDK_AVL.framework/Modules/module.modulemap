@@ -1,0 +1,11 @@
+framework module FawryPaySDK_AVL {
+  umbrella header "FawryPaySDK_AVL.h"
+
+  export *
+  module * { export * }
+}
+
+module FawryPaySDK_AVL.Swift {
+  header "FawryPaySDK_AVL-Swift.h"
+  requires objc
+}
