@@ -45,8 +45,10 @@ class ViewController: UIViewController {
                                           baseURL: "https://atfawrystaging.atfawry.com/",
                                           appLanguage: AppLanguage.English,
                                           enable3Ds: true,
-                                          translationDict: dictionaryForLocalization,
-                                          avlAmount: 20,
+                                          avlAmount: nil,
+                                          logoImage: UIImage(named: "FawryImage"),
+                                          boldFont: UIFont.boldSystemFont(ofSize: 17),
+                                          regulerFont:UIFont.italicSystemFont(ofSize: 17),
                                           completionBlock: { (status) in
             print("Payment Method: SDK Loaded with status \(status)")
         }, onPreCompletionHandler: { (error) in

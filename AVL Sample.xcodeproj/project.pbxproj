@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A22B5A327C16D6E0774671C /* Pods_AVL_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */; };
+		50DFA4DD2B3476F30032E1CF /* Style.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50DFA4DC2B3476F30032E1CF /* Style.plist */; };
 		B61BB00B297442220001157B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BB00A297442220001157B /* AppDelegate.swift */; };
 		B61BB00F297442220001157B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BB00E297442220001157B /* ViewController.swift */; };
 		B61BB012297442220001157B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61BB010297442220001157B /* Main.storyboard */; };
 		B61BB014297442230001157B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61BB013297442230001157B /* Assets.xcassets */; };
 		B61BB017297442230001157B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61BB015297442230001157B /* LaunchScreen.storyboard */; };
-		D32A6931DF4C8E00A036EE40 /* Pods_AVL_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C29E3BB74EB0701C5105C7 /* Pods_AVL_Sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		48C29E3BB74EB0701C5105C7 /* Pods_AVL_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVL_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		586D90F8C1C3F9D805C1A27E /* Pods-AVL Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.release.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.release.xcconfig"; sourceTree = "<group>"; };
+		50DFA4DC2B3476F30032E1CF /* Style.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Style.plist; sourceTree = "<group>"; };
 		B61BB007297442220001157B /* AVL Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVL Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61BB00A297442220001157B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61BB00E297442220001157B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +25,9 @@
 		B61BB013297442230001157B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B61BB016297442230001157B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B61BB018297442230001157B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDDFCD4D3D37D7CAAF040BA3 /* Pods-AVL Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.debug.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.release.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.release.xcconfig"; sourceTree = "<group>"; };
+		E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.debug.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVL_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,38 +35,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D32A6931DF4C8E00A036EE40 /* Pods_AVL_Sample.framework in Frameworks */,
+				0A22B5A327C16D6E0774671C /* Pods_AVL_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35BD106A51F106F284395177 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				48C29E3BB74EB0701C5105C7 /* Pods_AVL_Sample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		802C02084A53A37434596E3C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FDDFCD4D3D37D7CAAF040BA3 /* Pods-AVL Sample.debug.xcconfig */,
-				586D90F8C1C3F9D805C1A27E /* Pods-AVL Sample.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		B61BAFFE297442220001157B = {
 			isa = PBXGroup;
 			children = (
 				B61BB009297442220001157B /* AVL Sample */,
 				B61BB008297442220001157B /* Products */,
-				802C02084A53A37434596E3C /* Pods */,
-				35BD106A51F106F284395177 /* Frameworks */,
+				D1C63170D74B3BEF4BAFDDC9 /* Pods */,
+				FBD7ADBAB8A31BDC89C702A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,8 +69,26 @@
 				B61BB013297442230001157B /* Assets.xcassets */,
 				B61BB015297442230001157B /* LaunchScreen.storyboard */,
 				B61BB018297442230001157B /* Info.plist */,
+				50DFA4DC2B3476F30032E1CF /* Style.plist */,
 			);
 			path = "AVL Sample";
+			sourceTree = "<group>";
+		};
+		D1C63170D74B3BEF4BAFDDC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */,
+				C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBD7ADBAB8A31BDC89C702A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,11 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61BB01B297442230001157B /* Build configuration list for PBXNativeTarget "AVL Sample" */;
 			buildPhases = (
-				7249F84E47E9BD71D403DE4B /* [CP] Check Pods Manifest.lock */,
+				8E586AE434BD5F4A34882D99 /* [CP] Check Pods Manifest.lock */,
 				B61BB003297442220001157B /* Sources */,
 				B61BB004297442220001157B /* Frameworks */,
 				B61BB005297442220001157B /* Resources */,
-				2B44B26369AFDACE5C25CCAE /* [CP] Embed Pods Frameworks */,
+				71FC93F0B08A3B85A5F24274 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +153,7 @@
 			files = (
 				B61BB017297442230001157B /* LaunchScreen.storyboard in Resources */,
 				B61BB014297442230001157B /* Assets.xcassets in Resources */,
+				50DFA4DD2B3476F30032E1CF /* Style.plist in Resources */,
 				B61BB012297442220001157B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +161,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B44B26369AFDACE5C25CCAE /* [CP] Embed Pods Frameworks */ = {
+		71FC93F0B08A3B85A5F24274 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,7 +178,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7249F84E47E9BD71D403DE4B /* [CP] Check Pods Manifest.lock */ = {
+		8E586AE434BD5F4A34882D99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +350,7 @@
 		};
 		B61BB01C297442230001157B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDDFCD4D3D37D7CAAF040BA3 /* Pods-AVL Sample.debug.xcconfig */;
+			baseConfigurationReference = E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -375,7 +378,7 @@
 		};
 		B61BB01D297442230001157B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 586D90F8C1C3F9D805C1A27E /* Pods-AVL Sample.release.xcconfig */;
+			baseConfigurationReference = C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
