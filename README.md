@@ -140,7 +140,7 @@ FawryLaunchModel
 Example:
 
 <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/7.png" width="300"/>
-------------------------------------------------------------------------
+
 
 ## **Callbacks Explanation:**
 -   **launchAVL:**\
