@@ -137,6 +137,41 @@ FawryLaunchModel
 <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/6.png" width="700"/>
 
 
+Example:
+
+<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/7.png" width="300"/>
+------------------------------------------------------------------------
+
+## **Callbacks Explanation:**
+-   **launchAVL:**\
+    There are 5 callbacks:
+    1.   **completionBlock: { FawrySDKStatusCode? in }**\
+        called when flow launched successfully.
+
+    2.  **onPreCompletionHandler: { FawryError? in }**\
+        called when flow NOT launched.
+
+    3.   **errorBlock: { FawryError? in }**
+        -   if the payment didn't pass.
+        -   if you enabled the receipt, this callback will be called after clicking the done button in the receipt.
+        -   if you disabled the receipt, this callback will be called upon the finish of the payment screen and the failure of the payment.
+
+    4.  **onPaymentCompletedHandler: { Any ? in }**\
+        will be called only whether the payment passed or not. And it's called upon receiving the response of the payment either success or failure.
+
+    5.   **onSuccessHandler: {Any ? in }**
+        -   if the payment passed.
+        -   if you enabled the receipt, this callback will be called after clicking the done button in the receipt.
+        -   if you disabled the receipt, this callback will be called upon the finish of the payment screen and the success of the payment.
+            
+
+
+
+
+
+
+
+
 
 
 
