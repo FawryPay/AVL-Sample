@@ -169,8 +169,23 @@ Example:
 
 
 
-
-
+## **Look and Feel**
+1. **AVL amount :**
+   - Now textfield for Amount will be editable when avlAmount in launchAVL = nil.
+3. **Color:**
+   -  You can change color from Style. Plist you can add these Kays in Style.Plist.
+       -   fawry_black_Hex
+       -   fawry_background_Hex
+       -   fawry_blue_Hex
+       -   fawry_Yellow_Hex
+       -   fawry_Green_Hex
+       -   fawry_white_Hex
+         
+5. **Logo:**
+   - You can change Logo from launchAVL in parameter logoImage you can set UIimage.
+7. **Fonts:**
+   -  You can change fonts from launchAVL in parameter boldFont for titles and regulerFont you can set UIFont.
+ 
 
 
 
