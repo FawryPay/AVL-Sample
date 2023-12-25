@@ -14,3 +14,8 @@ Use this integration if you want your iOS application to:
 Make sure you have an active FawryPay account, or [**create an account**](https://atfawry.fawrystaging.com/merchant/register).
 
 
+### **How iOS SDK Looks Like**
+![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/1.png) ![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/2.png)
+
+[**Clone**](https://github.com/FawryPay/AVL-Sample.git) and test our sample application.
+------------------------------------------------------------------------
