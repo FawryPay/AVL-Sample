@@ -186,7 +186,7 @@ Example:
 7. **Fonts:**
    -  You can change fonts from launchAVL in parameter boldFont for titles and regulerFont you can set UIFont.
  
-
+<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/8.png" width="300"/>      <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/9.png" width="300"/>
 
 
 
