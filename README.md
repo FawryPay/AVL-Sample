@@ -123,7 +123,18 @@ FawryLaunchModel
 
 
 
+## **Step 3: Override the SDK colors**
 
+1.  Add a plist file to your project named “Style”.
+2.  Add keys named:
+
+    -   primaryColorHex
+    -   secondaryColorHex
+    -   tertiaryColorHex
+    -   headerColorHex
+
+3.  Give the keys values of your preferred hex color codes
+<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/6.png" width="700"/>
 
 
 
