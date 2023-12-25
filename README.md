@@ -71,6 +71,7 @@ LaunchCustomerModel
 | customerMobile    | String   | optional     | \-                                              | +0100000000                                        |
 | customerProfileId | String   | optional     | \-                                              | 1234                                               |
 
+
 LaunchMerchantModel
 | **PARAMETER**  | **TYPE** | **REQUIRED** | **DESCRIPTION**                                                                                                                                                                | **EXAMPLE**                         |
 |---------------|---------------|---------------|---------------|---------------|
