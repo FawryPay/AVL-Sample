@@ -97,7 +97,14 @@ FawryLaunchModel
 | avlInfo           | AVLInfo                  | required     | \-                                                | \-                                                |
 | apiPath           | String                   | Optional - default value = nil | If the user needs to send a path of URL.| "fawrypay-a pi/api/"                      |
 
-
+| **Property**      |          **TYPE**        | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                         |
+|-------------------|--------------------------|--------------|---------------|---------------|
+| skipReceipt       | Boolean                  | optional - default value = false    | to skip receipt after payment trial               | \-                                                |
+| skipCustomerInput | Boolean                  | optional - default value = true     |to skip login screen in which we take email and mobile| \-                                                |
+| beneficiaryName   | String                   | mandatory     | \-                                                | “name”                                         |
+| beneficiaryWalletNumber| String                   | mandatory     | \-                                                | “01234567890”                                |
+| beneficiaryName   | Double                   | mandatory     | \-                                                | 3.00                                              |
+| beneficiaryName   | String                   | mandatory     | \-                                                | “01234567890”                                     |
 
 
 
