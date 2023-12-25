@@ -108,8 +108,9 @@ FawryLaunchModel
 
 
 
-
-
+3.  Calling Mode:
+     -  Payment Mode: Call launchAVL from the shared instance of FrameworkHelper and the payment screen will launch.
+<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/5.png" width="900"/>
 
 
 
