@@ -45,3 +45,32 @@ This document illustrates how our gateway can be integrated within your iOS appl
 3. Open the terminal navigated to your project root folder
 4. Run pod install
 
+
+## **Step 2: Initialize FawryPay IOS SDK**
+
+1. Import FawryPay SDK in your Swift file.
+
+``` swift
+import FawryFrameworkAnonymous
+```
+2. Create an instance of
+    - LaunchCustomerModel
+    - LaunchMerchantModel
+    - AVLInfo
+    - FawryLaunchModel
+
+and pass the required parameters (Required and optional parameters are determined below).
+![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/4.png)
+
+
+LaunchCustomerModel
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                        |
+|---------------|---------------|---------------|---------------|---------------|
+| customerName      | String   | optional     | \-                                              | Name Name                                          |
+| customerEmail     | String   | optional     | \-                                              | [email\@email.com](mailto:email@email.com)         |
+| customerMobile    | String   | optional     | \-                                              | +0100000000                                        |
+| customerProfileId | String   | optional     | \-                                              | 1234                                               |
+
+
+
+
