@@ -112,6 +112,24 @@ FawryLaunchModel
      -  Payment Mode: Call launchAVL from the shared instance of FrameworkHelper and the payment screen will launch.
 <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/5.png" width="900"/>
 
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                          |
+|---------------|---------------|---------------|---------------|---------------|
+| on                | UIViewController| required     | The view controller which will be the starting point of the SDK.| self                                             |
+| launchModel       | FawryLaunchModel| required     | Has info that needed to launch the SDK            | Example in step 2                                  |
+| baseURL           | String          | required     | Provided by the support team. Use staging URL for testing and switch for production to go live.|(https://atfawry.fawrystaging.com) (staging)        (https://atfawry.com) (production)|
+| appLanguage       | String          | required     | SDK language which will affect SDK's interface languages.| AppLanguage.English                           |
+| enable3Ds         | Bool            |optional - default value = false| to allow 3D secure payment make it “true”   | true                                           |
+| avlAmount         | Double          | required     | depends on refund configuration: will be true when refund is enabled and false when refund is disabled| 7.0                       |
+
+
+
+
+
+
+
+
+
+
 
 
 
