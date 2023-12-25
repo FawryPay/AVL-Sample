@@ -103,8 +103,8 @@ FawryLaunchModel
 | skipCustomerInput | Boolean                  | optional - default value = true     |to skip login screen in which we take email and mobile| \-                                                |
 | beneficiaryName   | String                   | mandatory     | \-                                                | “name”                                         |
 | beneficiaryWalletNumber| String                   | mandatory     | \-                                                | “01234567890”                                |
-| beneficiaryName   | Double                   | mandatory     | \-                                                | 3.00                                              |
-| beneficiaryName   | String                   | mandatory     | \-                                                | “01234567890”                                     |
+| avlFees           | Double                   | mandatory     | \-                                                | 3.00                                              |
+| billingAcct       | String                   | mandatory     | \-                                                | “01234567890”                                     |
 
 
 
