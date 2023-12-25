@@ -15,7 +15,8 @@ Make sure you have an active FawryPay account, or [**create an account**](https:
 
 
 ### **How iOS SDK Looks Like**
-![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/1.png) ![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/2.png)
+<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/1.png" width="300"/>    <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/2.png" width="300"/>
+
 
 [**Clone**](https://github.com/FawryPay/AVL-Sample.git) and test our sample application.
 ------------------------------------------------------------------------
