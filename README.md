@@ -170,7 +170,7 @@ Example:
 
 
 
-## **Look and Feel**
+## **Look and Feel:**
 1. **AVL amount :**
    - Now textfield for Amount will be editable when avlAmount in launchAVL = nil.
 3. **Color:**
