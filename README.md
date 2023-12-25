@@ -89,3 +89,21 @@ AVLInfo
 
 
 
+FawryLaunchModel
+| **PARAMETER**     |          **TYPE**        | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                         |
+|-------------------|--------------------------|--------------|---------------|---------------|
+| customer          | LaunchCustomerModel      | optional     | Customer information.                             | \-                                                |
+| merchant          | LaunchMerchantModel      | required     | Merchant information.                             | \-                                                |
+| avlInfo           | AVLInfo                  | required     | \-                                                | \-                                                |
+| apiPath           | String                   | Optional - default value = nil | If the user needs to send a path of URL.| "fawrypay-a pi/api/"                      |
+
+
+
+
+
+
+
+
+
+
+
