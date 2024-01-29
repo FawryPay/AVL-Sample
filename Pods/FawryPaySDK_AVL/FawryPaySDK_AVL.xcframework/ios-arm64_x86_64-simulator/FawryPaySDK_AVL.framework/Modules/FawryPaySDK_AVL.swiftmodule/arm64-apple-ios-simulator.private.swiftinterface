@@ -213,6 +213,8 @@ public protocol ViewModelPressible {
 @objc @_inheritsConvenienceInitializers public class FawrySDKConfigurationManager : ObjectiveC.NSObject {
   public static let shared: FawryPaySDK_AVL.FawrySDKConfigurationManager
   public func loadConfigurations(with baseURL: Swift.String? = nil)
+  public func keyboardConfigrations()
+  public func setAppLanguage(lang: Swift.String?)
   public func getServerAddress() -> Swift.String
   public func getAppLanguage() -> Swift.String
   @objc override dynamic public init()
@@ -305,6 +307,7 @@ public enum PaymentURLs : Swift.String, Swift.Codable {
   @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var doneButton: UIKit.UIButton!
   @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var backBtn: UIKit.UIButton!
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func doneButtonAction(_ sender: Any)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -558,6 +561,7 @@ extension UIKit.UIColor {
   @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var confirmPaymentButton: UIKit.UIButton!
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func confirmPaymentButtonAction(_ sender: Any? = nil)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)

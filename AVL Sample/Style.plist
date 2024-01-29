@@ -6,21 +6,19 @@
 	<string></string>
 	<key>clientNameEn</key>
 	<string></string>
-	<key>primaryColorHex</key>
-	<string>73631c</string>
-	<key>secondaryColorHex</key>
-	<string>FF0000</string>
-	<key>tertiaryColorHex</key>
-	<string>D8D8D8</string>
 	<key>headerColorHex</key>
 	<string>838B58</string>
-	<key>fawry_black_Hex</key>
-	<string>D8D8D8</string>
 	<key>fawry_background_Hex</key>
-	<string>838B58</string>
+	<string>FFFFFF</string>
+	<key>payment_sheet_separator_color_Hex</key>
+	<string>00FFFF</string>
 	<key>fawry_blue_Hex</key>
-	<string>73631c</string>
+	<string>3498db</string>
 	<key>fawry_Yellow_Hex</key>
-	<string>D8D8D8</string>
+	<string>00FFFF</string>
+	<key>confirm_btn_color_Hex</key>
+	<string>00FFFF</string>
+	<key>fawry_black_Hex</key>
+	<string>00FFFF</string>
 </dict>
 </plist>

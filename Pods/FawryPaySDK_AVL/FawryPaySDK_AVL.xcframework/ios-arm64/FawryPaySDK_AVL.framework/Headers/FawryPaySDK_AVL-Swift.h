@@ -378,6 +378,7 @@ SWIFT_CLASS("_TtC15FawryPaySDK_AVL15FrameworkHelper")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
 /// Different input type for OTP fields.
 typedef SWIFT_ENUM(NSInteger, KeyboardType, open) {
   KeyboardTypeNumeric = 0,
@@ -428,6 +429,7 @@ SWIFT_CLASS("_TtC15FawryPaySDK_AVL28PaymentDetailsViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified confirmPaymentButton;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
 - (IBAction)backButtonAction:(id _Nonnull)sender;
 - (IBAction)confirmPaymentButtonAction:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -462,6 +464,7 @@ SWIFT_CLASS("_TtC15FawryPaySDK_AVL28PaymentReceiptViewController")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified doneButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backBtn;
 - (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
 - (IBAction)backButtonAction:(id _Nonnull)sender;
 - (IBAction)doneButtonAction:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
