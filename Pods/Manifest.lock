@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.6.4)
-  - FawryPaySDK_AVL (0.2.8):
+  - FawryPaySDK_AVL (0.2.9):
     - Alamofire (~> 5.6.4)
     - IQKeyboardManagerSwift (~> 6.5.11)
     - MBRadioButton (~> 1.4)
@@ -32,7 +32,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
-  FawryPaySDK_AVL: 4a4e604d726e52832a90d9282472f3127b5ec662
+  FawryPaySDK_AVL: bb43741cb9f00e3d653613e8d00667a4b947327a
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   MBRadioButton: dcf111c9bb633d4cf6e83200d804af6e025033c8
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8

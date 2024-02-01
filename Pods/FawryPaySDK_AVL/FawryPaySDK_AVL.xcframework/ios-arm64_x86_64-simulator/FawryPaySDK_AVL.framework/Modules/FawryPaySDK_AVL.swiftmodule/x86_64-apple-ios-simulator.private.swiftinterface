@@ -120,7 +120,7 @@ extension FawryPaySDK_AVL.OTPFieldView : UIKit.UITextFieldDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
 }
 public class AVLInfo : Swift.Codable {
-  public init(length: Swift.Int?, btcWithFees: Swift.Int?, btcWithoutFees: Swift.Int?, pans: [Swift.String]?, avlFeesOffUs: Swift.Double?, avlFeesOnUs: Swift.Double?)
+  public init(length: Swift.Int?, btcWithFees: Swift.Int?, btcWithoutFees: Swift.Int?, pans: [Swift.String]?, avlFeesOffUs: Swift.Double?, avlFeesOnUs: Swift.Double?, minValue: Swift.Double?, maxValue: Swift.Double?)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws

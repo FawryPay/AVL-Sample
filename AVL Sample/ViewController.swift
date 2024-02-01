@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func ShowPayment(_ sender: UIButton) {
         
-        let avlInfo = AVLInfo(length: 6 , btcWithFees: 4933, btcWithoutFees: 4428 , pans: ["512345"], avlFeesOffUs: 7.7, avlFeesOnUs: 5.0)
+        let avlInfo = AVLInfo(length: 6 , btcWithFees: 4933, btcWithoutFees: 4428 , pans: ["512345"], avlFeesOffUs: 7.7, avlFeesOnUs: 5.0, minValue: 10.3, maxValue: 20.3)
         let customerInfo = LaunchCustomerModel(customerName: "Mohamed", customerEmail: "email@gmail.com", customerMobile: "+0100000000")
         
         let merchantInfo = LaunchMerchantModel(merchantCode: "siYxylRjSPyg6dz0QH/y9A==",
