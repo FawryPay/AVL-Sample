@@ -86,8 +86,9 @@ AVLInfo
 | length            | Int      | required     | \-                                                | 6                                                  |
 | btcWithFees       | Int      | required     | \-                                                | 4933                                               |
 | btcWithoutFees    | Int      | required     | \-                                                | 4428                                               |
-| pans              | [String] | required     | BANs related to the bank to use the btcWithoutFees| [“512345”]                                         |
-
+| pans              | [String] | required     | BANs related to the bank to use the btcWithoutFees| [“512345”]                                         | 
+| minValue              | double | optional     |  Minimum value that user can enter in amount |  1.0  
+| maxValue              | double | optional     | Maximum value that user can enter in amount |  100.0  
 
 
 FawryLaunchModel
@@ -120,7 +121,7 @@ FawryLaunchModel
 | baseURL           | String          | required     | Provided by the support team. Use staging URL for testing and switch for production to go live.|(https://atfawry.fawrystaging.com) (staging)        (https://atfawry.com) (production)|
 | appLanguage       | String          | required     | SDK language which will affect SDK's interface languages.| AppLanguage.English                           |
 | enable3Ds         | Bool            |optional - default value = false| to allow 3D secure payment make it “true”   | true                                           |
-| avlAmount         | Double          | required     | depends on refund configuration: will be true when refund is enabled and false when refund is disabled| 7.0                       |
+| avlAmount         | Double          | optional     | depends on refund configuration: will be true when refund is enabled and false when refund is disabled| 7.0                       |
 
 
 
