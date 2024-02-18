@@ -6053,6 +6053,7 @@
                     "usr": "s:Sd"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               },
               {
@@ -6067,6 +6068,7 @@
                     "usr": "s:Sd"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -20204,6 +20206,336 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(merchantRefNumber:statusDescription:customerMail:type:referenceNumber:customerProfileId:expirationTime:paymentMethod:customerMobile:signature:statusCode:fawryFees:paymentAmount:orderAmount:walletQr:shippingFees:nextAction:usedBTC:orderStatus:interestAmount:upFrontFees:valUBillData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentChargeResponse",
+                "printedName": "FawryPaySDK_AVL.PaymentChargeResponse",
+                "usr": "s:15FawryPaySDK_AVL21PaymentChargeResponseC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FawryPaySDK_AVL.NextActionModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NextActionModel",
+                    "printedName": "FawryPaySDK_AVL.NextActionModel",
+                    "usr": "s:15FawryPaySDK_AVL15NextActionModelV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FawryPaySDK_AVL.ValuBillDataModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ValuBillDataModel",
+                    "printedName": "FawryPaySDK_AVL.ValuBillDataModel",
+                    "usr": "c:@M@FawryPaySDK_AVL@objc(cs)ValuBillDataModel"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15FawryPaySDK_AVL21PaymentChargeResponseC17merchantRefNumber17statusDescription12customerMail4type09referenceJ00M9ProfileId14expirationTime13paymentMethod0M6Mobile9signature0K4Code9fawryFees0U6Amount11orderAmount8walletQr12shippingFees10nextAction7usedBTC11orderStatus14interestAmount11upFrontFees12valUBillDataACSSSg_A5ZSdSgA3ZSiSgA_A_A_AZA_AA15NextActionModelVSgA0_AZA_A_AA17ValuBillDataModelCSgtcfc",
+            "mangledName": "$s15FawryPaySDK_AVL21PaymentChargeResponseC17merchantRefNumber17statusDescription12customerMail4type09referenceJ00M9ProfileId14expirationTime13paymentMethod0M6Mobile9signature0K4Code9fawryFees0U6Amount11orderAmount8walletQr12shippingFees10nextAction7usedBTC11orderStatus14interestAmount11upFrontFees12valUBillDataACSSSg_A5ZSdSgA3ZSiSgA_A_A_AZA_AA15NextActionModelVSgA0_AZA_A_AA17ValuBillDataModelCSgtcfc",
+            "moduleName": "FawryPaySDK_AVL",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
@@ -20263,7 +20595,6 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true,
         "conformances": [
           {
             "kind": "Conformance",
@@ -45193,14 +45524,14 @@
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/Core\/Payment\/Payment Details\/Models\/Payment Method Response\/PaymentChargeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3019,
+      "offset": 3022,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/Core\/Payment\/Payment Details\/Models\/Payment Method Response\/PaymentChargeResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3019,
+      "offset": 3022,
       "length": 6,
       "value": "\"type\""
     },
@@ -47783,231 +48114,252 @@
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1343,
+      "offset": 1375,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1549,
+      "offset": 1581,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1601,
+      "offset": 1633,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 2125,
+      "offset": 2157,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "StringLiteral",
-      "offset": 3123,
+      "offset": 3155,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 3318,
+      "offset": 3350,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 3784,
+      "offset": 3816,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 4508,
+      "offset": 4540,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 5024,
+      "offset": 5056,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 5757,
+      "offset": 5789,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 6255,
+      "offset": 6287,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 7355,
+      "offset": 7387,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "StringLiteral",
-      "offset": 7391,
+      "offset": 7423,
       "length": 38,
       "value": "\"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\""
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "StringLiteral",
-      "offset": 7498,
+      "offset": 7530,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 7518,
+      "offset": 7550,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 7707,
+      "offset": 7739,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 8035,
+      "offset": 8067,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 8299,
+      "offset": 8331,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 9227,
+      "offset": 9259,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 10552,
+      "offset": 10584,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 11099,
+      "offset": 11131,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 12059,
+      "offset": 12793,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 12680,
+      "offset": 13414,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 13154,
+      "offset": 13888,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 13761,
+      "offset": 14495,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 14661,
+      "offset": 15395,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 14878,
+      "offset": 15612,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 15300,
+      "offset": 16034,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 16719,
+      "offset": 17453,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 16956,
+      "offset": 17690,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 17177,
+      "offset": 17911,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 17285,
+      "offset": 18019,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 17628,
+      "offset": 18356,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18966,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19387,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sameh\/Documents\/FawryPayAVL\/FawryPaySDK\/FawryPaySDK-AVL\/FrameworkHelper\/FrameworkHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19468,
       "length": 5,
       "value": "false"
     },

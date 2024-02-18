@@ -120,7 +120,7 @@ extension FawryPaySDK_AVL.OTPFieldView : UIKit.UITextFieldDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
 }
 public class AVLInfo : Swift.Codable {
-  public init(length: Swift.Int?, btcWithFees: Swift.Int?, btcWithoutFees: Swift.Int?, pans: [Swift.String]?, avlFeesOffUs: Swift.Double?, avlFeesOnUs: Swift.Double?, minValue: Swift.Double?, maxValue: Swift.Double?)
+  public init(length: Swift.Int?, btcWithFees: Swift.Int?, btcWithoutFees: Swift.Int?, pans: [Swift.String]?, avlFeesOffUs: Swift.Double?, avlFeesOnUs: Swift.Double?, minValue: Swift.Double? = nil, maxValue: Swift.Double? = nil)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -445,7 +445,7 @@ extension FawryPaySDK_AVL.SavedCardsViewController : UIKit.UITableViewDelegate, 
 extension UIKit.UITableViewCell {
   @_Concurrency.MainActor(unsafe) public static func cellIdentifier() -> Swift.String
 }
-@_hasMissingDesignatedInitializers public class PaymentChargeResponse : Swift.Codable {
+public class PaymentChargeResponse : Swift.Codable {
   public var merchantRefNumber: Swift.String?
   public var statusDescription: Swift.String?
   public var customerMail: Swift.String?
@@ -470,6 +470,7 @@ extension UIKit.UITableViewCell {
   public var interestAmount: Swift.Double?
   public var upFrontFees: Swift.Double?
   public var valUBillData: FawryPaySDK_AVL.ValuBillDataModel?
+  public init(merchantRefNumber: Swift.String?, statusDescription: Swift.String?, customerMail: Swift.String?, type: Swift.String?, referenceNumber: Swift.String?, customerProfileId: Swift.String?, expirationTime: Swift.Double?, paymentMethod: Swift.String?, customerMobile: Swift.String?, signature: Swift.String?, statusCode: Swift.Int?, fawryFees: Swift.Double?, paymentAmount: Swift.Double?, orderAmount: Swift.Double?, walletQr: Swift.String?, shippingFees: Swift.Double?, nextAction: FawryPaySDK_AVL.NextActionModel?, usedBTC: Swift.Int?, orderStatus: Swift.String?, interestAmount: Swift.Double?, upFrontFees: Swift.Double?, valUBillData: FawryPaySDK_AVL.ValuBillDataModel? = nil)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
