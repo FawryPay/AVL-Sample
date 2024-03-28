@@ -6,7 +6,6 @@ import AVFoundation
 import Alamofire
 import CommonCrypto
 import CryptoKit
-@_exported import FawryPaySDK_AVL
 import Foundation
 import IQKeyboardManagerSwift
 import MBRadioButton
@@ -470,7 +469,10 @@ public class PaymentChargeResponse : Swift.Codable {
   public var interestAmount: Swift.Double?
   public var upFrontFees: Swift.Double?
   public var valUBillData: FawryPaySDK_AVL.ValuBillDataModel?
-  public init(merchantRefNumber: Swift.String?, statusDescription: Swift.String?, customerMail: Swift.String?, type: Swift.String?, referenceNumber: Swift.String?, customerProfileId: Swift.String?, expirationTime: Swift.Double?, paymentMethod: Swift.String?, customerMobile: Swift.String?, signature: Swift.String?, statusCode: Swift.Int?, fawryFees: Swift.Double?, paymentAmount: Swift.Double?, orderAmount: Swift.Double?, walletQr: Swift.String?, shippingFees: Swift.Double?, nextAction: FawryPaySDK_AVL.NextActionModel?, usedBTC: Swift.Int?, orderStatus: Swift.String?, interestAmount: Swift.Double?, upFrontFees: Swift.Double?, valUBillData: FawryPaySDK_AVL.ValuBillDataModel? = nil)
+  public var paymentTime: Swift.Double?
+  public var cardLastFourDigits: Swift.Int?
+  public var authNumber: Swift.Int?
+  public init(merchantRefNumber: Swift.String?, statusDescription: Swift.String?, customerMail: Swift.String?, type: Swift.String?, referenceNumber: Swift.String?, customerProfileId: Swift.String?, expirationTime: Swift.Double?, paymentMethod: Swift.String?, customerMobile: Swift.String?, signature: Swift.String?, statusCode: Swift.Int?, fawryFees: Swift.Double?, paymentAmount: Swift.Double?, orderAmount: Swift.Double?, walletQr: Swift.String?, shippingFees: Swift.Double?, nextAction: FawryPaySDK_AVL.NextActionModel?, usedBTC: Swift.Int?, orderStatus: Swift.String?, interestAmount: Swift.Double?, upFrontFees: Swift.Double?, valUBillData: FawryPaySDK_AVL.ValuBillDataModel? = nil, paymentTime: Swift.Double?, cardLastFourDigits: Swift.Int?, authNumber: Swift.Int?)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws

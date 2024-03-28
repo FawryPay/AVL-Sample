@@ -73,6 +73,13 @@ class ViewController: UIViewController {
         }, onSuccessHandler: { (response) in
             let merchantRefNumber = (response as? PaymentChargeResponse)?.merchantRefNumber ?? ""
             print("Payment Method: Success Handler: \(merchantRefNumber)")
+            let paymentTime = (response as? PaymentChargeResponse)?.paymentTime ?? 0.0
+            let authNumber = (response as? PaymentChargeResponse)?.authNumber ?? 0
+            let cardLastFourDigits = (response as? PaymentChargeResponse)?.cardLastFourDigits ?? 0
+            
+            print("Payment Method: Success Handler paymentTime: \(paymentTime)")
+            print("Payment Method: Success Handler authNumber: \(authNumber)")
+            print("Payment Method: Success cardLastFourDigits: \(cardLastFourDigits)")
         })
     }
 }
