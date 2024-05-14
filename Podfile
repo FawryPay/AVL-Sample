@@ -7,7 +7,7 @@ target 'AVL Sample' do
 
   # Pods for AVL Sample
 
-pod 'FawryPaySDK_AVL'
+  pod 'FawryPaySDK_AVL', '0.3.9002'
 
 end
 

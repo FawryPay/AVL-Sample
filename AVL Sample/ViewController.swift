@@ -19,20 +19,17 @@ class ViewController: UIViewController {
     
     @IBAction func ShowPayment(_ sender: UIButton) {
         
-        let avlInfo = AVLInfo(length: 6 , btcWithFees: 4933, btcWithoutFees: 4428 , pans: ["512345"], avlFeesOffUs: 7.7, avlFeesOnUs: 5.0, minValue: 10.3, maxValue: 20.3)
+        let avlInfo = AVLInfo(length: 6 , btcWithFees: 71333, btcWithoutFees: 71334 , pans: ["512345"], avlFeesOffUs: 7.7, avlFeesOnUs: 5.0, minValue: 10.3, maxValue: 20.3)
         let customerInfo = LaunchCustomerModel(customerName: "Mohamed", customerEmail: "email@gmail.com", customerMobile: "+0100000000")
         
         let merchantInfo = LaunchMerchantModel(merchantCode: "siYxylRjSPyg6dz0QH/y9A==",
-                                               merchantRefNum: FrameworkHelper.shared?.getMerchantReferenceNumber(),
-                                               secureKey: "086f55c1-463b-425a-9342-f75b094c8b3e")
+                                               secureKey: "ce1c18d1-68a3-429e-bed6-6c1d657dbc15")
         let launchModel = FawryLaunchModel(customer: customerInfo,
                                            merchant: merchantInfo,
-                                           chargeItems: nil,
                                            signature: nil,
                                            avlInfo: avlInfo,
                                            apiPath: nil)
         
-        launchModel.skipCustomerInput = true
         launchModel.skipReceipt = false
         
 //        launchModel.beneficiaryName = "Mohamed"
@@ -54,11 +51,7 @@ class ViewController: UIViewController {
         }, onPreCompletionHandler: { (error) in
             print("Payment Method: SDK Launch on pre completion \(error?.message)")
         }, errorBlock: { (error) in
-            print(error?.errorCode)
-            print(error?.message)
-            print(error?.usedBTC)
-            print(error?.refNumber)
-            print("Payment Method: has error \(error?.message)")
+            print(error)
         }, onPaymentCompletedHandler: {
             (chargeResponse) in
             if let response = chargeResponse as? PaymentChargeResponse{
@@ -71,15 +64,7 @@ class ViewController: UIViewController {
                 print(er.message)
             }
         }, onSuccessHandler: { (response) in
-            let merchantRefNumber = (response as? PaymentChargeResponse)?.merchantRefNumber ?? ""
-            print("Payment Method: Success Handler: \(merchantRefNumber)")
-            let paymentTime = (response as? PaymentChargeResponse)?.paymentTime ?? 0.0
-            let authNumber = (response as? PaymentChargeResponse)?.authNumber ?? 0
-            let cardLastFourDigits = (response as? PaymentChargeResponse)?.cardLastFourDigits ?? 0
-            
-            print("Payment Method: Success Handler paymentTime: \(paymentTime)")
-            print("Payment Method: Success Handler authNumber: \(authNumber)")
-            print("Payment Method: Success cardLastFourDigits: \(cardLastFourDigits)")
+            print("Payment Response: \(response)")
         })
     }
 }
