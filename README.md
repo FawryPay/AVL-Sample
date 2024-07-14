@@ -76,7 +76,7 @@ LaunchCustomerModel
 LaunchMerchantModel
 | **PARAMETER**  | **TYPE** | **REQUIRED** | **DESCRIPTION**                                                                                                                                                                | **EXAMPLE**                         |
 |---------------|---------------|---------------|---------------|---------------|
-| merchantCode   | String   | required     | Merchant ID provided during FawryPay account setup.                                                                                                                            | +/IPO2sghiethhN6tMC==               |
+| merchantCode   | String   | required     | Merchant ID provided during FawryPay account setup.                                                                                                                            | 400000011323               |
 | merchantRefNum | String   | required     | Merchant's transaction reference number is random 10 alphanumeric digits. You can call FrameworkHelper.shared?.getMerchantReferenceNumber() to generate it rather than pass it. | A1YU7MKI09                          |
 | secureKey      | String   | required     | provided by support                                                                                                                                                            | 4b8jw3j2-8gjhfrc-4wc4-scde-453dek3d |
 
