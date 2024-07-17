@@ -46,7 +46,8 @@ This document illustrates how our gateway can be integrated within your iOS appl
 
 3. Open the terminal navigated to your project root folder
 4. Run pod install
-
+   
+With minimum deployments iOS 12.0
 
 ## **Step 2: Initialize FawryPay IOS SDK**
 
