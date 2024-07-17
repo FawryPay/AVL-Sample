@@ -1,3 +1,4 @@
+
 # 
 
 # **FawryPaySDK-AVL iOS**
@@ -41,7 +42,7 @@ This document illustrates how our gateway can be integrated within your iOS appl
 2. Add in your pod file 
 <!-- -->
 
-     pod ‘FawryPaySDK-AVL’
+     pod ‘FawryPaySDK-AVL’, '0.4.0'
 
 3. Open the terminal navigated to your project root folder
 4. Run pod install
@@ -52,7 +53,7 @@ This document illustrates how our gateway can be integrated within your iOS appl
 1. Import FawryPay SDK in your Swift file.
 
 ``` swift
-import FawryFrameworkAnonymous
+import FawryPaySDK_AVL
 ```
 2. Create an instance of
     - LaunchCustomerModel
@@ -61,7 +62,8 @@ import FawryFrameworkAnonymous
     - FawryLaunchModel
 
 and pass the required parameters (Required and optional parameters are determined below).
-![](https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/4.png)
+
+<img width="988" src="https://github.com/user-attachments/assets/8815a7ef-ad7d-44ab-9498-98ac0f5808d3">
 
 
 LaunchCustomerModel
@@ -76,8 +78,7 @@ LaunchCustomerModel
 LaunchMerchantModel
 | **PARAMETER**  | **TYPE** | **REQUIRED** | **DESCRIPTION**                                                                                                                                                                | **EXAMPLE**                         |
 |---------------|---------------|---------------|---------------|---------------|
-| merchantCode   | String   | required     | Merchant ID provided during FawryPay account setup.                                                                                                                            | 400000011323               |
-| merchantRefNum | String   | required     | Merchant's transaction reference number is random 10 alphanumeric digits. You can call FrameworkHelper.shared?.getMerchantReferenceNumber() to generate it rather than pass it. | A1YU7MKI09                          |
+| merchantCode   | String   | required     | Merchant ID provided during FawryPay account setup.                                                                                                                            | 400000011323 |
 | secureKey      | String   | required     | provided by support                                                                                                                                                            | 4b8jw3j2-8gjhfrc-4wc4-scde-453dek3d |
 
 AVLInfo
@@ -87,8 +88,8 @@ AVLInfo
 | btcWithFees       | Int      | required     | \-                                                | 4933                                               |
 | btcWithoutFees    | Int      | required     | \-                                                | 4428                                               |
 | pans              | [String] | required     | BANs related to the bank to use the btcWithoutFees| [“512345”]                                         | 
-| minValue              | double | optional     |  Minimum value that user can enter in amount |  1.0  
-| maxValue              | double | optional     | Maximum value that user can enter in amount |  100.0  
+| avlFeesOffUs              | double | optional     |  - |  7.7  
+| avlFeesOnUs              | double | optional     | - |  5.0  
 
 
 FawryLaunchModel
@@ -96,23 +97,23 @@ FawryLaunchModel
 |-------------------|--------------------------|--------------|---------------|---------------|
 | customer          | LaunchCustomerModel      | optional     | Customer information.                             | \-                                                |
 | merchant          | LaunchMerchantModel      | required     | Merchant information.                             | \-                                                |
+| signature          | String      | Optional - Should be always nil     | \-                             | \-                                               |
+| paymentWithCardToken          | Bool      | Optional - Should be always false     | \-                             | false                                               |
 | avlInfo           | AVLInfo                  | required     | \-                                                | \-                                                |
 | apiPath           | String                   | Optional - default value = nil | If the user needs to send a path of URL.| "fawrypay-a pi/api/"                      |
 
 | **Property**      |          **TYPE**        | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                         |
 |-------------------|--------------------------|--------------|---------------|---------------|
-| skipReceipt       | Boolean                  | optional - default value = false    | to skip receipt after payment trial               | \-                                                |
-| skipCustomerInput | Boolean                  | optional - default value = true     |to skip login screen in which we take email and mobile| \-                                                |
+| skipReceipt       | Boolean                  | optional - default value = false    | to skip receipt after payment trial               | \-                                                                                             |
 | beneficiaryName   | String                   | mandatory     | \-                                                | “name”                                         |
-| beneficiaryWalletNumber| String                   | mandatory     | \-                                                | “01234567890”                                |
-| avlFees           | Double                   | mandatory     | \-                                                | 3.00                                              |
+| beneficiaryWalletNumber| String                   | mandatory     | \-                                                | “01234567890”                                |                                              |
 | billingAcct       | String                   | mandatory     | \-                                                | “01234567890”                                     |
 
 
 
 3.  Calling Mode:
      -  Payment Mode: Call launchAVL from the shared instance of FrameworkHelper and the payment screen will launch.
-<img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/5.png" width="900"/>
+<img width="752" src="https://github.com/user-attachments/assets/6b475731-ce4d-469f-84db-13ebb55fde0e">
 
 | **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                          |
 |---------------|---------------|---------------|---------------|---------------|
@@ -121,8 +122,98 @@ FawryLaunchModel
 | baseURL           | String          | required     | Provided by the support team. Use staging URL for testing and switch for production to go live.|(https://atfawry.fawrystaging.com) (staging)        (https://atfawry.com) (production)|
 | appLanguage       | String          | required     | SDK language which will affect SDK's interface languages.| AppLanguage.English                           |
 | enable3Ds         | Bool            |optional - default value = false| to allow 3D secure payment make it “true”   | true                                           |
-| avlAmount         | Double          | optional     | depends on refund configuration: will be true when refund is enabled and false when refund is disabled| 7.0                       |
+| avlAmountDataType         | Enum          | required     | depending on the merchant’s needs, the type of amount value can be either an integer or a decimal | 7.0   
+| logoImage         | UIImage          | required     | if merchant wants to set an image not title | \-  
+| titleHeader         | String          | required     | if merchant wants to set title not an image | "Fawry"      
+| regulerFont         | UIFont          | required     | font of sdk | UIFont(name: "SFProText-RegularItalic", size: 17)                   |
 
+## **Step 2.1: Initialize Seamless Credit Card, FawryPay IOS SDK**
+
+1. Import FawryPay SDK in your Swift file.
+
+``` swift
+import FawryPaySDK_AVL
+```
+2. Create an instance of
+    - LaunchCustomerModel
+    - LaunchMerchantModel
+    - SavedCard
+    - ChargeItemsParamsModel
+    - FawryLaunchModel
+
+and pass the required parameters (Required and optional parameters are determined below).
+
+<img width="1093" src="https://github.com/user-attachments/assets/6e7ce284-18c2-4cbc-bce5-d34bcea3451f">
+
+
+LaunchCustomerModel
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                        |
+|---------------|---------------|---------------|---------------|---------------|
+| customerName      | String   | optional     | \-                                              | Name Name                                          |
+| customerEmail     | String   | optional     | \-                                              | [email\@email.com](mailto:email@email.com)         |
+| customerMobile    | String   | optional     | \-                                              | +0100000000                                        |
+| customerProfileId | String   | optional     | \-                                              | 1234                                               |
+
+
+LaunchMerchantModel
+| **PARAMETER**  | **TYPE** | **REQUIRED** | **DESCRIPTION**                                                                                                                                                                | **EXAMPLE**                         |
+|---------------|---------------|---------------|---------------|---------------|
+| merchantCode   | String   | required     | Merchant ID provided during FawryPay account setup.                                                                                                                            | 400000011323               |                          |
+| secureKey      | String   | required     | provided by support                                                                                                                                                            | 4b8jw3j2-8gjhfrc-4wc4-scde-453dek3d |
+
+SavedCard
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                          |
+|---------------|---------------|---------------|---------------|---------------|
+| cardHolderName            | String      | required     | Name appears on card                                                | \-                                                  |
+| cardNumber       | String      | required     | Number appears on card                                                | \-                                              |
+| cardExpiryMonth    | String      | required     | Expiration month of the card                                                | \-                                               |
+| cardExpiryYear              | String | required     | Expiration year of the card | \-                                          | 
+| cvv              | String | required     |  3 digits are usually found on signature strip |  \-    
+
+ChargeItemsParamsModel
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                          |
+|---------------|---------------|---------------|---------------|---------------|
+| itemId            | String      | required     | id for the item                                                | "f528a3beb5274855b990dcbcc29df0d6"                                                  |
+| charge_description       | String      | required     |  description                                         | "example description"                                              |
+| price    | Double      | required     | price for the item                                                | 80.0                                               |
+| quantity              | Int | required     | quantity for the item | 1                                         |   
+
+
+FawryLaunchModel
+| **PARAMETER**     |          **TYPE**        | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                         |
+|-------------------|--------------------------|--------------|---------------|---------------|
+| customer          | LaunchCustomerModel      | optional     | Customer information.                             | \-                                                |
+| merchant          | LaunchMerchantModel      | required     | Merchant information.                             | \-                                                |
+| signature          | String      | Optional - Should be always nil     | \-                             | \-                                               |
+| paymentWithCardToken          | Bool      | Optional - Should be always false     | \-                             | false                                               |
+| avlInfo           | AVLInfo                  | Optional - Sould be always nil     | \-                                                | \-                                                |
+| apiPath           | String                   | Optional - default value = nil | If the user needs to send a path of URL.| "fawrypay-a pi/api/"                      |
+| chargeInfo           | [ChargeItemsParamsModel]                   | required | items that will be paid off |Example in step 2.1
+
+| **Property**      |          **TYPE**        | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                         |
+|-------------------|--------------------------|--------------|---------------|---------------|
+| skipReceipt       | Boolean                  | optional - default value = false    | to skip receipt after payment trial               | \-                                                |                                        |
+| beneficiaryWalletNumber| String                   | optional     | \-                                                | \-                                |
+| billingAcct       | String                   | optional     | \-                                                | \-                                     |
+
+
+
+3.  Calling Mode:
+     -  Payment Mode: Call launchAVL from the shared instance of FrameworkHelper and the payment screen will launch.
+<img width="739" src="https://github.com/user-attachments/assets/fb558403-c753-46aa-b57c-c23ece794974">
+
+| **PARAMETER**     | **TYPE** | **REQUIRED** | **DESCRIPTION**                                 | **EXAMPLE**                                          |
+|---------------|---------------|---------------|---------------|---------------|
+| on                | UIViewController| required     | The view controller which will be the starting point of the SDK.| self                                             |
+| launchModel       | FawryLaunchModel| required     | Has info that needed to launch the SDK            | Example in step 2.1                                  |
+| baseURL           | String          | required     | Provided by the support team. Use staging URL for testing and switch for production to go live.|(https://atfawry.fawrystaging.com) (staging)        (https://atfawry.com) (production)|
+| appLanguage       | String          | required     | SDK language which will affect SDK's interface languages.| AppLanguage.English                           |
+| enable3Ds         | Bool            |optional - default value = false| to allow 3D secure payment make it “true”   | true                                           |
+| logoImage         | UIImage          | required     | if merchant wants to set an image not title | \-  
+| titleHeader         | String          | required     | if merchant wants to set title not an image | "Fawry"   
+| card        | SavedCard          | required     | Has info that needed for credit card | Example in step 2.1  |
+| transactionPurpose        | String          | optional     | \- | "nameExample"  |
+| authCaptureModePayment        | Bool          | required     | \- | true  |
 
 
 ## **Step 3: Override the SDK colors**
@@ -145,7 +236,7 @@ Example:
 
 
 ## **Callbacks Explanation:**
--   **launchAVL:**\
+-   **launchAVL, payUsingCreditCardSeamless:**\
     There are 5 callbacks:
     -   **completionBlock: { FawrySDKStatusCode? in }**
         -   called when flow launched successfully.
@@ -189,10 +280,3 @@ Example:
    -  You can change fonts from launchAVL in parameter boldFont for titles and regulerFont you can set UIFont.
  
 <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/8.png" width="300"/>      <img src="https://github.com/FawryPay/IOS-Fawrypay-AVL-Sample/blob/main/Docs/9.png" width="300"/>
-
-
-
-
-
-
-
