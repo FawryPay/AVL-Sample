@@ -62,11 +62,11 @@
 		</data>
 		<key>Base.lproj/CardDetails.storyboardc/bgb-Ov-e3R-view-Dy4-Vz-N09.nib/objects-13.0+.nib</key>
 		<data>
-		MCzL18aaZZG66St7kf8zlyGuqb4=
+		nVuwyolqbuHAXwaX+XRAk4XDfQA=
 		</data>
 		<key>Base.lproj/CardDetails.storyboardc/bgb-Ov-e3R-view-Dy4-Vz-N09.nib/runtime.nib</key>
 		<data>
-		9OZ82veqnQp0oH+nmkgseFwThQE=
+		ycboMIlNI6K/d4Sxf1c1/ic1EWk=
 		</data>
 		<key>Base.lproj/CardDetails.storyboardc/esk-YN-Syh-view-cLC-rn-wKN.nib/objects-13.0+.nib</key>
 		<data>
@@ -162,11 +162,11 @@
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/4R2-9E-jYN-view-9fO-pG-aSx.nib/objects-13.0+.nib</key>
 		<data>
-		bZCUw9PvORQl/2pwlsHH8hPt9Sc=
+		fBBtRBIGNu5CmOS5wK0pfMwucrc=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/4R2-9E-jYN-view-9fO-pG-aSx.nib/runtime.nib</key>
 		<data>
-		CY2V7zP4IaPVaLrwBCgjSOcFz9o=
+		fv+gpJkxdm79ZX8dL+7d5MCJCTo=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/CustomerInputViewController.nib/objects-13.0+.nib</key>
 		<data>
@@ -182,11 +182,11 @@
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/OFk-WG-gLG-view-WgX-bs-aEU.nib/objects-13.0+.nib</key>
 		<data>
-		KNGE1DHW6WpY7miiSUCXGtGETCI=
+		cdsPrfeTYr8fNxpzW1A2obsX7NU=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/OFk-WG-gLG-view-WgX-bs-aEU.nib/runtime.nib</key>
 		<data>
-		u/0svMAmgVrGgokRWFGAWmZjbzk=
+		c9NcKhrufHp0jaUSWGjOQX877o0=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/PaymentDetailsViewController.nib/objects-13.0+.nib</key>
 		<data>
@@ -214,19 +214,19 @@
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/lDZ-yZ-4oy-view-CvP-PL-UVS.nib/objects-13.0+.nib</key>
 		<data>
-		5qB9hta7yfYrmgbdTS/j3tmki/Y=
+		vlp/8Hm7ovRtZDgOLqk8pVdyGr0=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/lDZ-yZ-4oy-view-CvP-PL-UVS.nib/runtime.nib</key>
 		<data>
-		Y0De3OoOl0F3jX30IPatSj4cPzg=
+		xpxfp9Xg5AY8ePbJlcpeEQRkQ6g=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/mwi-z2-kv5-view-zKw-sU-vg9.nib/objects-13.0+.nib</key>
 		<data>
-		dj3iSGv8MSVxFJr+n7f2eiDh6r4=
+		O5l6kosyRiyBBZPqVxgIP154BB8=
 		</data>
 		<key>Base.lproj/Merchant.storyboardc/mwi-z2-kv5-view-zKw-sU-vg9.nib/runtime.nib</key>
 		<data>
-		fqkuF8Y1FhicmXSW0XRF3bVH6RQ=
+		8QW3si4SV191pZsI5eweTls4AM4=
 		</data>
 		<key>Base.lproj/PaymentBreakUpTableViewCell.nib/objects-13.0+.nib</key>
 		<data>
@@ -266,51 +266,51 @@
 		</data>
 		<key>Headers/FawryPaySDK_AVL-Swift.h</key>
 		<data>
-		Y8d9bfDqZm/fIhHoQKizkWWgRcc=
+		lplXvoonnYggaY4GKLs9VJSQfJc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iazK1WOdBR0dHpavT6yN0znVNxo=
+		zXl0pylbhJDdGeVhDPFvCFk5LUY=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		0QccFQPkycBIbaApZu82DdzeS8M=
+		54ch7PDW3jXBZ2/YPZil0qRnMAE=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ZFqjUhRY0oQpNLXixdKrEmPcCH4=
+		uusEw3d+Ng5IrLVhJLdaQ3+PRGA=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		R74B8t41zMqNmA+xclJ+wHSSBNA=
+		hnTkFuS0njDrF3YlX/yQZgmlB3M=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ZFqjUhRY0oQpNLXixdKrEmPcCH4=
+		uusEw3d+Ng5IrLVhJLdaQ3+PRGA=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iZxEYSXSRNHhKnGRGwbNIBHTPk4=
+		xXcCn133IAG7MyVRPtx/PqK72Bw=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		0QccFQPkycBIbaApZu82DdzeS8M=
+		54ch7PDW3jXBZ2/YPZil0qRnMAE=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LXGa/KZvWLBX6zwQDQXRYifrNXU=
+		rV3ZZfRbVY5lzah6ZNl1yGow73E=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1vv26FGAI5u1810c6jKLSUvGjMg=
+		egCn4XKE72tzXRwGgJYqCatWnUo=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LXGa/KZvWLBX6zwQDQXRYifrNXU=
+		rV3ZZfRbVY5lzah6ZNl1yGow73E=
 		</data>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yh8sTyGugy5yVjxSWL0IQnO3DmQ=
+		cUphv1dj3Hq+E23lAMvkBBe8d2E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -430,7 +430,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3oFMW//OS4AwMJ3+Wxfk+YXkOrs=
+			Z5oTvLeMrGeru+xnbmH1wyv7F+Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y58NcVruorR/EygvKzTdJyAs7Yk=
+			umg5Nkrtvho+pyFGXjQ3YM+rRFo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -639,14 +639,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YvFufa+7tKqAKJRLCRK0tWOE/XlTM6lt1VnSLOgfWZk=
+			XzTeeZInb3WNk99lFu/V7KGUuHvKtDevoMaDJDLgGJc=
 			</data>
 		</dict>
 		<key>Base.lproj/CardDetails.storyboardc/bgb-Ov-e3R-view-Dy4-Vz-N09.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zqvQkNx7e7MuFJMEHqY4OTEQYU5BwbZoOUAb3lL2RZk=
+			szEK61QQgkE/xokEZnrHKsJOgQs2dV6Qf6n+LSnS4ro=
 			</data>
 		</dict>
 		<key>Base.lproj/CardDetails.storyboardc/esk-YN-Syh-view-cLC-rn-wKN.nib/objects-13.0+.nib</key>
@@ -814,14 +814,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zeehNtDY68+swsplDNUdtE5VTYBsnDoNY6Nj7wxSu+w=
+			+5HmhsQJL3K/udPqH4qRv1jCgfn/mFDHWvvplHCYViU=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/4R2-9E-jYN-view-9fO-pG-aSx.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ro8y9K1KOdOIKfot+MhPw7CHV8yzum+cZx1EZim3SFY=
+			Pj+8nN8kQgosA5UCTixgAOfyLJ3mjFJGnSGknm0oXOs=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/CustomerInputViewController.nib/objects-13.0+.nib</key>
@@ -849,14 +849,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lMi//CKKOyEQa4WIyzzLVzTK7i5eAl7LH9C1cEaLYE8=
+			LZbl3UrS3DhpCSnDuoXES60EaFfmD8XwI/2qfS5xjDw=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/OFk-WG-gLG-view-WgX-bs-aEU.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O6HIh8+9ZfqtCI2BwG/QYSXfAtSuIRwouY6dN3/UyDk=
+			B+4ESklW7e2h7AfKi+ZYLhUmuY5LX1jllN9BiSvFIA4=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/PaymentDetailsViewController.nib/objects-13.0+.nib</key>
@@ -905,28 +905,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NXWWaXSMnDAMpx+Bz1l4iYHZ3Po6EeLdEhe23dUgoRA=
+			fJfGvULQCaxIZ2S4T2x4XggrdSBQo6wQC3Oo2p+TSkM=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/lDZ-yZ-4oy-view-CvP-PL-UVS.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			doyx3b3ztM6Z93T30iNm5M7Jr9OYFi5EExVpKU8umAo=
+			3JWVaQNDVGzskwm24sUZH8S1T5voGsq0aLLGK6ZQZs4=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/mwi-z2-kv5-view-zKw-sU-vg9.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GhYwktTZ5678Xj7HruHJgH1+/tdEZFrNFghnLHzKcKE=
+			kavhsWsyTT+JT7qEu1zu/dyC1oVnkwnTK29uHASLiKw=
 			</data>
 		</dict>
 		<key>Base.lproj/Merchant.storyboardc/mwi-z2-kv5-view-zKw-sU-vg9.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			INPzCy6uRtvQPN/B217xWkZnzLA5/c8i+skeLiLV4zw=
+			HNv4vOXOpYl/p+ggDYPImcPzCDKm2oJXOzXBbmZUkhY=
 			</data>
 		</dict>
 		<key>Base.lproj/PaymentBreakUpTableViewCell.nib/objects-13.0+.nib</key>
@@ -996,77 +996,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YvWz69FydcLtD2wqKSvLJJdGOod75UpHxs2ykurh5h4=
+			/8MiU4O36+wHFY2IN9pzVxjwXoEWHtld76zqUmZ1l5g=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YCSYT8MVuBBJ7jTzpCtlB8qo/nrKCZn1Rxy6T+jFUCs=
+			1sQPu4i8rp1E/XtPvS+tO8lnDKWMsuGmu0aZVQbNEt4=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pQfhqd62GwTV34Gmd6VSY1+XyUDPe2rF+oD+isAbUkw=
+			+xKlHaaMQc7YgJBpF3WbAn+V5OCkgdynj3RzEtGcMUg=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			459uJu79e8B23q2UC5SwSSP3Ei+shZSY1F9R12AbLgU=
+			KBINBa2GxDPCTpK9/y7fwium/9pv+p6JEuKWO7GPRlo=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pQfhqd62GwTV34Gmd6VSY1+XyUDPe2rF+oD+isAbUkw=
+			+xKlHaaMQc7YgJBpF3WbAn+V5OCkgdynj3RzEtGcMUg=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P5yHZB/jTRaC2L8Zu4zkSp3KQey75FtwbMr1OYbsRfc=
+			tT1IeuYZpOhZTe4QdwAkLTkWyib5YwLVqRbfQleWPf4=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YCSYT8MVuBBJ7jTzpCtlB8qo/nrKCZn1Rxy6T+jFUCs=
+			1sQPu4i8rp1E/XtPvS+tO8lnDKWMsuGmu0aZVQbNEt4=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D926GX8BuELLPF05Vt5owlYt+sqRQ+THlHYC4JQwX60=
+			6AmtbcBI1rqA0ojUy9hNAc4fOjwBTWW+XWBqf3fhJkE=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2bV7Qo2J4DV3mxEZGeTyZZK8ArkdN3MIDI5I9nqrw+g=
+			FjS3TzuWA8/vS/q5b/LvLqgXD7T23nOyrAIV60K+pRo=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D926GX8BuELLPF05Vt5owlYt+sqRQ+THlHYC4JQwX60=
+			6AmtbcBI1rqA0ojUy9hNAc4fOjwBTWW+XWBqf3fhJkE=
 			</data>
 		</dict>
 		<key>Modules/FawryPaySDK_AVL.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TjunF/TgeL1d0S6JhW4EKTuenygr5EkMmbGZWbns6+8=
+			3hXMvZBMdfiMgu0pIMZvFklty5b4B3sGM3dH+D6qDEY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1205,7 +1205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iVlKRLvbbfqtgUKL3GVeH/nsPCQHhdqdGUaEmC33NNk=
+			z0kKmh1qCHfFlO7TMUzkAesIwrpV40trGK+efTn0LF4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1304,7 +1304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OTs9/Di4JwYtM4MJSr4/MNpRwP0ziI6wQj+NU2X5XNk=
+			ADatVqsdXQp7vDWe5oJ2L/udujNTrfPyfCaULwsNpIk=
 			</data>
 			<key>optional</key>
 			<true/>

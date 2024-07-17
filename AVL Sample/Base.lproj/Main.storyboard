@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,20 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-H4-UDo">
-                                <rect key="frame" x="121.66666666666669" y="404.66666666666669" width="147" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Payment Details"/>
-                                <connections>
-                                    <action selector="ShowPayment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S54-zr-u1j"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-fd-8kg">
+                                <rect key="frame" x="108.33333333333333" y="383.66666666666669" width="173.66666666666669" height="76.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-H4-UDo">
+                                        <rect key="frame" x="0.0" y="0.0" width="173.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Payment Details"/>
+                                        <connections>
+                                            <action selector="ShowPayment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S54-zr-u1j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axu-Zs-ART">
+                                        <rect key="frame" x="0.0" y="42.333333333333314" width="173.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="seamlessAVLAction"/>
+                                        <connections>
+                                            <action selector="seamlessAVLAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mc0-iD-bEH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8qw-H4-UDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fm-Z6-s3h"/>
-                            <constraint firstItem="8qw-H4-UDo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1g2-Ka-0hH"/>
+                            <constraint firstItem="bNj-fd-8kg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S7n-3n-3aI"/>
+                            <constraint firstItem="bNj-fd-8kg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGZ-di-H96"/>
                         </constraints>
                     </view>
                 </viewController>
