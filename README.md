@@ -42,7 +42,7 @@ This document illustrates how our gateway can be integrated within your iOS appl
 2. Add in your pod file 
 <!-- -->
 
-     pod ‘FawryPaySDK-AVL’, '0.4.0'
+     pod 'FawryPaySDK_AVL', '0.4.0'
 
 3. Open the terminal navigated to your project root folder
 4. Run pod install
