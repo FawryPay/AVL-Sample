@@ -86,12 +86,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func seamlessAVLAction(_ sender: Any) {
+        let secureKey = "3928e924-b8b0-4c13-a80f-e9ba0d104d35"
+        let merchantCode = "770000019516"
+        let serverURL = "https://atfawry.fawrystaging.com/"
         
         let customerInfo = LaunchCustomerModel(customerName: "Ahmed", customerEmail: "ahmedamrsharf@gmail.com", customerMobile: "01127927617", customerProfileId: "71917")
         let chargeInfo = ChargeItemsParamsModel.init(itemId: "f528a3beb5274855b990dcbcc29df0d6", charge_description: "example description", price: 80.0, quantity: 1)
         
-        let merchantInfo = LaunchMerchantModel(merchantCode: "400000011323",
-                                               secureKey: "4b815c12-891c-42ab-b8de-45bd6bd02c3d")
+        let merchantInfo = LaunchMerchantModel(merchantCode: merchantCode,
+                                               merchantRefNum: self.getMerchantReferenceNumber(),
+                                               secureKey: secureKey)
+
         let launchModel = FawryLaunchModel(customer: customerInfo,
                                            merchant: merchantInfo,
                                            signature: nil,
@@ -111,7 +116,7 @@ class ViewController: UIViewController {
         launchModel.billingAcct = nil
         FrameworkHelper.shared?.payUsingCreditCardSeamless(on: self,
                                                            launchModel: launchModel,
-                                                           baseURL: "https://atfawry.fawrystaging.com/",
+                                                           baseURL: serverURL,
                                                            appLanguage: AppLanguage.English,
                                                            enable3Ds: true,
                                                            translationDict: nil,
@@ -154,6 +159,18 @@ class ViewController: UIViewController {
             print("Payment Method: Success Handler authNumber: \(authNumber)")
             print("Payment Method: Success cardLastFourDigits: \(cardLastFourDigits)")
         })
+    }
+    public func getMerchantReferenceNumber() -> String {
+        let count = 10
+        let letters : NSString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        var randomString = ""
+        for _ in 0 ..< count {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
     }
 }
 

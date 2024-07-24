@@ -7,8 +7,7 @@ target 'AVL Sample' do
 
   # Pods for AVL Sample
 
-pod 'FawryPaySDK_AVL', '0.4.0'
-
+pod 'FawryPaySDK_AVL', '0.4.4'
 end
 
 post_install do |installer|

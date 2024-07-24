@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FawryPaySDK_AVL
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import Alamofire
 import CommonCrypto
 import CryptoKit
+import DeveloperToolsSupport
 import Foundation
 import IQKeyboardManagerSwift
 import MBRadioButton
@@ -13,10 +14,12 @@ import ObjectiveC
 import RxSwift
 import Swift
 import SwiftMessages
+import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public class CardDetailsModel : Swift.Codable {
   public var cardNumber: Swift.String?
   public var cardExpiryMonth: Swift.String?
@@ -435,6 +438,7 @@ public class ChargeItemsParamsModel : Swift.Codable {
 }
 public class LaunchMerchantModel : Swift.Codable {
   public init(merchantCode: Swift.String?, secureKey: Swift.String?)
+  public init(merchantCode: Swift.String?, merchantRefNum: Swift.String? = FrameworkHelper.shared?.getMerchantReferenceNumber(), secureKey: Swift.String?)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
