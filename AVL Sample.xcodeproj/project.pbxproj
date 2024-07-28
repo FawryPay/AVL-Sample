@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A22B5A327C16D6E0774671C /* Pods_AVL_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */; };
+		16FC72C82C5695470097F266 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 16FC72C72C5695470097F266 /* RxSwift */; };
+		16FC72CB2C5695590097F266 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 16FC72CA2C5695590097F266 /* Alamofire */; };
 		50DFA4DD2B3476F30032E1CF /* Style.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50DFA4DC2B3476F30032E1CF /* Style.plist */; };
+		B3BAEB4A9D16E4A4541A1F79 /* Pods_AVL_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17ECBFA3BA9238B216ADD51 /* Pods_AVL_Sample.framework */; };
 		B61BB00B297442220001157B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BB00A297442220001157B /* AppDelegate.swift */; };
 		B61BB00F297442220001157B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BB00E297442220001157B /* ViewController.swift */; };
 		B61BB012297442220001157B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61BB010297442220001157B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140079943C03A1D447CDCD2F /* Pods-AVL Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.release.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.release.xcconfig"; sourceTree = "<group>"; };
+		166B28732C47218F00FFE5B2 /* FawryPaySDK_AVL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FawryPaySDK_AVL.xcframework; path = Pods/FawryPaySDK_AVL/FawryPaySDK_AVL.xcframework; sourceTree = "<group>"; };
 		50DFA4DC2B3476F30032E1CF /* Style.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Style.plist; sourceTree = "<group>"; };
 		B61BB007297442220001157B /* AVL Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVL Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61BB00A297442220001157B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +29,8 @@
 		B61BB013297442230001157B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B61BB016297442230001157B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B61BB018297442230001157B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.release.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.release.xcconfig"; sourceTree = "<group>"; };
-		E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.debug.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.debug.xcconfig"; sourceTree = "<group>"; };
-		FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVL_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6BD43BC8F3AE0BCDEBE315 /* Pods-AVL Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVL Sample.debug.xcconfig"; path = "Target Support Files/Pods-AVL Sample/Pods-AVL Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		E17ECBFA3BA9238B216ADD51 /* Pods_AVL_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVL_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A22B5A327C16D6E0774671C /* Pods_AVL_Sample.framework in Frameworks */,
+				16FC72CB2C5695590097F266 /* Alamofire in Frameworks */,
+				16FC72C82C5695470097F266 /* RxSwift in Frameworks */,
+				B3BAEB4A9D16E4A4541A1F79 /* Pods_AVL_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +82,8 @@
 		D1C63170D74B3BEF4BAFDDC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */,
-				C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */,
+				CD6BD43BC8F3AE0BCDEBE315 /* Pods-AVL Sample.debug.xcconfig */,
+				140079943C03A1D447CDCD2F /* Pods-AVL Sample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -86,7 +91,8 @@
 		FBD7ADBAB8A31BDC89C702A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA0CA94F0CD2435CB0D67444 /* Pods_AVL_Sample.framework */,
+				166B28732C47218F00FFE5B2 /* FawryPaySDK_AVL.xcframework */,
+				E17ECBFA3BA9238B216ADD51 /* Pods_AVL_Sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,17 +104,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61BB01B297442230001157B /* Build configuration list for PBXNativeTarget "AVL Sample" */;
 			buildPhases = (
-				8E586AE434BD5F4A34882D99 /* [CP] Check Pods Manifest.lock */,
+				A0D1BA2B859C4E17F4620050 /* [CP] Check Pods Manifest.lock */,
 				B61BB003297442220001157B /* Sources */,
 				B61BB004297442220001157B /* Frameworks */,
 				B61BB005297442220001157B /* Resources */,
-				71FC93F0B08A3B85A5F24274 /* [CP] Embed Pods Frameworks */,
+				E858974E718D572FE7C565D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "AVL Sample";
+			packageProductDependencies = (
+				16FC72C72C5695470097F266 /* RxSwift */,
+				16FC72CA2C5695590097F266 /* Alamofire */,
+			);
 			productName = "AVL Sample";
 			productReference = B61BB007297442220001157B /* AVL Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +147,10 @@
 				Base,
 			);
 			mainGroup = B61BAFFE297442220001157B;
+			packageReferences = (
+				16FC72C62C5695470097F266 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				16FC72C92C5695590097F266 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B61BB008297442220001157B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,24 +175,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		71FC93F0B08A3B85A5F24274 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E586AE434BD5F4A34882D99 /* [CP] Check Pods Manifest.lock */ = {
+		A0D1BA2B859C4E17F4620050 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,6 +195,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E858974E718D572FE7C565D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVL Sample/Pods-AVL Sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -350,7 +364,7 @@
 		};
 		B61BB01C297442230001157B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6BBE3DE67ACB829F19BA317 /* Pods-AVL Sample.debug.xcconfig */;
+			baseConfigurationReference = CD6BD43BC8F3AE0BCDEBE315 /* Pods-AVL Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,7 +380,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,20 +389,24 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fawry.AVL-FawryPaySDK-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FawryPaySDK_AVL_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "fawry-AVL-FawryPaySDK-app-dev";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B61BB01D297442230001157B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1928B406B3247280FFB481E /* Pods-AVL Sample.release.xcconfig */;
+			baseConfigurationReference = 140079943C03A1D447CDCD2F /* Pods-AVL Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -400,7 +418,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,10 +427,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fawry.AVL-FawryPaySDK-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FawryPaySDK_AVL_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "fawry-AVL-FawryPaySDK-app-dev";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -438,6 +459,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16FC72C62C5695470097F266 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.7.1;
+			};
+		};
+		16FC72C92C5695590097F266 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16FC72C72C5695470097F266 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16FC72C62C5695470097F266 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		16FC72CA2C5695590097F266 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16FC72C92C5695590097F266 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B61BAFFF297442220001157B /* Project object */;
 }

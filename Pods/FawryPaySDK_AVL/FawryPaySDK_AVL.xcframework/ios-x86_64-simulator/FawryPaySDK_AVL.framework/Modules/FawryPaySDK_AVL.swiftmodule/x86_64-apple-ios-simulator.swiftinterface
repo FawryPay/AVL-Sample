@@ -1,0 +1,801 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FawryPaySDK_AVL
+import AVFoundation
+import Alamofire
+import CommonCrypto
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import IQKeyboardManagerSwift
+import MBRadioButton
+import ObjectiveC
+import RxSwift
+import Swift
+import SwiftMessages
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class CardDetailsModel : Swift.Codable {
+  public var cardNumber: Swift.String?
+  public var cardExpiryMonth: Swift.String?
+  public var cardExpiryYear: Swift.String?
+  public var cvv: Swift.String?
+  public var cardHolderName: Swift.String?
+  public init(card_number: Swift.String?, cardExpiryMonth: Swift.String?, cardExpiryYear: Swift.String?, cvv: Swift.String?, cardHolderName: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension Foundation.Date {
+  public func toString(withFormat format: Swift.String = "EEE, dd MMM yyyy hh:mm a") -> Swift.String
+}
+public struct SavedCard : Swift.Codable {
+  public var creationDate: Swift.Int64?
+  public var lastFourDigits: Swift.String?
+  public var token: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ThemeStyleFawryPaySDK : ObjectiveC.NSObject {
+  public var theme: UIKit.UIColor?
+  public var lightBorder: UIKit.UIColor?
+  public var darkBorder: UIKit.UIColor?
+  public var shadow: UIKit.UIColor?
+  public var darkBackground: UIKit.UIColor?
+  public var lightBackground: UIKit.UIColor?
+  public var intermidiateBackground: UIKit.UIColor?
+  public var darkText: UIKit.UIColor?
+  public var lightText: UIKit.UIColor?
+  public var intermidiateText: UIKit.UIColor?
+  public var affirmation: UIKit.UIColor?
+  public var negation: UIKit.UIColor?
+  public init(theme: UIKit.UIColor?, lightBorder: UIKit.UIColor?, darkBorder: UIKit.UIColor?, shadow: UIKit.UIColor?, darkBackground: UIKit.UIColor?, lightBackground: UIKit.UIColor?, intermidiateBackground: UIKit.UIColor?, darkText: UIKit.UIColor?, lightText: UIKit.UIColor?, intermidiateText: UIKit.UIColor?, affirmation: UIKit.UIColor?, negation: UIKit.UIColor?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseComponentViewController : FawryPaySDK_AVL.BaseViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func crossTapped(_ sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol OTPFieldViewDelegate {
+  @objc func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Swift.Int) -> Swift.Bool
+  @objc func enteredOTP(otp: Swift.String)
+  @objc func hasEnteredAllOTP(hasEnteredAll: Swift.Bool) -> Swift.Bool
+}
+@objc public enum DisplayType : Swift.Int {
+  case circular
+  case roundedCorner
+  case square
+  case diamond
+  case underlinedBottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum KeyboardType : Swift.Int {
+  case numeric
+  case alphabet
+  case alphaNumeric
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class OTPFieldView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var displayType: FawryPaySDK_AVL.DisplayType
+  @_Concurrency.MainActor(unsafe) public var fieldsCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var otpInputType: FawryPaySDK_AVL.KeyboardType
+  @_Concurrency.MainActor(unsafe) public var fieldFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public var secureEntry: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var hideEnteredText: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var requireCursor: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var cursorColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var fieldSize: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var separatorSpace: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var fieldBorderWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var shouldAllowIntermediateEditing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var defaultBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var defaultBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var errorBorderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any FawryPaySDK_AVL.OTPFieldViewDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) public func initializeUI()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK_AVL.OTPFieldView : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public class AVLInfo : Swift.Codable {
+  public init(length: Swift.Int?, btcWithFees: Swift.Int?, btcWithoutFees: Swift.Int?, pans: [Swift.String]?, avlFeesOffUs: Swift.Double?, avlFeesOnUs: Swift.Double?, minValue: Swift.Double? = nil, maxValue: Swift.Double? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class BaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK_AVL.BaseViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public enum MWalletOption {
+  case Notification, QRCode
+  public static func == (a: FawryPaySDK_AVL.MWalletOption, b: FawryPaySDK_AVL.MWalletOption) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class MWalletInfo {
+  public var selectedOption: FawryPaySDK_AVL.MWalletOption
+  public var mobNum: Swift.String?
+  public init(selectedOption: FawryPaySDK_AVL.MWalletOption, mobNum: Swift.String?)
+  @objc deinit
+}
+public struct SectionModel {
+}
+@objc public protocol RowViewModel {
+  @objc func cellIdentifier() -> Swift.String
+}
+public protocol ViewModelPressible {
+  func cellPressed()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AddCardViewController : FawryPaySDK_AVL.BaseViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) open var backgroundView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var cardModel: FawryPaySDK_AVL.CardDetailsModel?
+  public typealias onCompletion = () -> Swift.Void
+  public typealias onErrorHandler = (FawryPaySDK_AVL.FawryError?) -> Swift.Void
+  public typealias onAddNewCard = (FawryPaySDK_AVL.SavedCard) -> Swift.Void
+  public typealias onDismiss = () -> Swift.Void
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PurchaseItemsParamsModel : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class DesignableView : UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var shadowRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var shadowOpacity: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var shadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var shadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FawrySDKConfigurationManager : ObjectiveC.NSObject {
+  public class var shared: FawryPaySDK_AVL.FawrySDKConfigurationManager! {
+    get
+  }
+  public func loadConfigurations(with baseURL: Swift.String? = nil)
+  public func keyboardConfigrations()
+  public func setAppLanguage(lang: Swift.String?)
+  public func getServerAddress() -> Swift.String
+  public func getAppLanguage() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum AvlAmountDataType {
+  case integer
+  case decimal
+  public static func == (a: FawryPaySDK_AVL.AvlAmountDataType, b: FawryPaySDK_AVL.AvlAmountDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Foundation.Data {
+  public func sha256() -> Swift.String
+}
+extension Swift.String {
+  public func sha256() -> Swift.String
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var isModal: Swift.Bool {
+    get
+  }
+}
+public enum ServiceTypeCode : Swift.String {
+  case pickup
+  case delivery
+  case dineIn
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class LaunchCustomerModel : ObjectiveC.NSObject, Swift.Codable {
+  public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?)
+  public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?, customerProfileId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct AppLanguage {
+  public static let English: Swift.String
+  public static let Arabic: Swift.String
+}
+public struct Currency {
+  public static let egp: Swift.String
+}
+public enum Payment_Method : Swift.String, Swift.Codable {
+  case all
+  case payAtFawry
+  case card
+  case wallet
+  case yellowCard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PaymentMethod : Swift.String, Swift.Codable {
+  case payAtFawry
+  case card
+  case mWallet
+  case valu
+  case installment
+  case selectedCard
+  case loyalty
+  case cashOnDelivery
+  case cashAccount
+  case creditCard
+  case yellowCard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WalletPaymentMethods : Swift.String, Swift.Codable {
+  case scanQR
+  case notification
+  case none
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PaymentURLs : Swift.String, Swift.Codable {
+  case return3DURL
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PaymentReceiptViewController : FawryPaySDK_AVL.BaseViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var doneButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var backBtn: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func doneButtonAction(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK_AVL.PaymentReceiptViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+}
+public class FawryLaunchModel : Swift.Codable {
+  public var skipReceipt: Swift.Bool
+  public var beneficiaryName: Swift.String?
+  public var beneficiaryWalletNumber: Swift.String?
+  public var billingAcct: Swift.String?
+  public var billTypeCode: Swift.Int?
+  public var paymentWithCardToken: Swift.Bool?
+  public init(customer: FawryPaySDK_AVL.LaunchCustomerModel?, merchant: FawryPaySDK_AVL.LaunchMerchantModel?, signature: Swift.String?, paymentWithCardToken: Swift.Bool? = false, paymentMethod: FawryPaySDK_AVL.Payment_Method = .all, avlInfo: FawryPaySDK_AVL.AVLInfo?, customerProfileId: Swift.String? = .none, apiPath: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum SDKMode : Swift.String {
+  case addCard
+  case choosePaymentMethod
+  case addressManager
+  case listAddresses
+  case addAddress
+  case savedCards
+  case cartDetails
+  case addressShipping
+  case myPoints
+  case createVoucher
+  case selectAddress
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ViewType : Swift.String {
+  case addCard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FawrySDKResponseCode : Swift.Int {
+  case successfullyLoaded
+  case userError
+  case userCanclled
+  case generalError
+  case successSavedUserCard
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum FawrySDKStatusCode : Swift.Int {
+  case success
+  case userDidCancel
+  case sdkNotIntitalized
+  case paramterMissing
+  case contollerNotFound
+  case missingParamAppLanguage
+  case missingParambaseUrl
+  case missingParamCustomerModel
+  case missingParamMerchantModel
+  case missingParamBeneficiaryWalletNumber
+  case missingParamBillingAcct
+  case missingParamAvlInfo
+  case missingParamBtcWithFees
+  case missingParamBtcWithoutFees
+  case missingParamPans
+  case missingParamPansLength
+  case missingParamAvlFeesOffUs
+  case missingParamAvlFeesOnUs
+  case missingParamCustomerProfileId
+  case missingParamMerchantCode
+  case missingParamSecureKey
+  case missingParamLaunchModel
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class ChargeItemsParamsModel : Swift.Codable {
+  public var variantCode: Swift.String?
+  public var reservationCodes: [Swift.String]?
+  public init(itemId: Swift.String, charge_description: Swift.String? = nil, price: Swift.Double, quantity: Swift.Int)
+  public init(itemId: Swift.String, charge_description: Swift.String? = nil, price: Swift.Double, quantity: Swift.Int, variantCode: Swift.String, reservationCodes: [Swift.String])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_hasMissingDesignatedInitializers public class ChargePaymentParamsModel : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class LaunchMerchantModel : Swift.Codable {
+  public init(merchantCode: Swift.String?, secureKey: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum SectionType {
+  case textOnly
+  case textWithArrow
+  case noText
+  case addAddress
+  public static func == (a: FawryPaySDK_AVL.SectionType, b: FawryPaySDK_AVL.SectionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class SectionViewModel {
+  public init(rowViewModels: [any FawryPaySDK_AVL.RowViewModel], isEnable: Swift.Bool, sectionHeight: Swift.Float, sectionModel: FawryPaySDK_AVL.SectionModel?, sectionType: FawryPaySDK_AVL.SectionType?, themeStyle: FawryPaySDK_AVL.ThemeStyleFawryPaySDK? = nil)
+  public init(rowViewModels: [any FawryPaySDK_AVL.RowViewModel], isEnable: Swift.Bool, sectionHeight: Swift.Float, sectionModel: FawryPaySDK_AVL.SectionModel?, sectionType: FawryPaySDK_AVL.SectionType?, themeStyle: FawryPaySDK_AVL.ThemeStyleFawryPaySDK? = nil, dimmed: Swift.Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SavedCardsViewController : FawryPaySDK_AVL.BaseViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) open var backgroundView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var headerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var labelHeader: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var backButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var addNewCardButton: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func addNewCardButtonAction(_ sender: Any)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK_AVL.SavedCardsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, commit editingStyle: UIKit.UITableViewCell.EditingStyle, forRowAt indexPath: Foundation.IndexPath)
+}
+extension UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) public static func cellIdentifier() -> Swift.String
+}
+public class PaymentChargeResponse : Swift.Codable {
+  public var merchantRefNumber: Swift.String?
+  public var statusDescription: Swift.String?
+  public var customerMail: Swift.String?
+  public var type: Swift.String?
+  public var referenceNumber: Swift.String?
+  public var customerProfileId: Swift.String?
+  public var expirationTime: Swift.Double?
+  public var paymentMethod: Swift.String?
+  public var customerMobile: Swift.String?
+  public var signature: Swift.String?
+  public var statusCode: Swift.Int?
+  public var fawryFees: Swift.Double?
+  public var paymentAmount: Swift.Double?
+  public var orderAmount: Swift.Double?
+  public var walletQr: Swift.String?
+  public var shippingFees: Swift.Double?
+  public var nextAction: FawryPaySDK_AVL.NextActionModel?
+  public var taxes: Swift.Double?
+  public var branchServiceFees: Swift.Double?
+  public var usedBTC: Swift.Int?
+  public var orderStatus: Swift.String?
+  public var interestAmount: Swift.Double?
+  public var upFrontFees: Swift.Double?
+  public var valUBillData: FawryPaySDK_AVL.ValuBillDataModel?
+  public init(merchantRefNumber: Swift.String?, statusDescription: Swift.String?, customerMail: Swift.String?, type: Swift.String?, referenceNumber: Swift.String?, customerProfileId: Swift.String?, expirationTime: Swift.Double?, paymentMethod: Swift.String?, customerMobile: Swift.String?, signature: Swift.String?, statusCode: Swift.Int?, fawryFees: Swift.Double?, paymentAmount: Swift.Double?, orderAmount: Swift.Double?, walletQr: Swift.String?, shippingFees: Swift.Double?, nextAction: FawryPaySDK_AVL.NextActionModel?, usedBTC: Swift.Int?, orderStatus: Swift.String?, interestAmount: Swift.Double?, upFrontFees: Swift.Double?, valUBillData: FawryPaySDK_AVL.ValuBillDataModel? = nil)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct NextActionModel : Swift.Codable {
+  public init(redirectUrl: Swift.String?, redirectType: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum NetworkError : Swift.Error, Swift.CustomStringConvertible, Swift.Codable {
+  case Unknown
+  case NotConnectedToInternet
+  case InternationalRoamingOff
+  case NotReachedServer
+  case ConnectionLost
+  case IncorrectDataReturned
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: FawryPaySDK_AVL.NetworkError, b: FawryPaySDK_AVL.NetworkError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension UIKit.UIColor {
+  public static var themeColor: UIKit.UIColor {
+    get
+  }
+  public static var lightBorderColor: UIKit.UIColor {
+    get
+  }
+  public static var darkBorderColor: UIKit.UIColor {
+    get
+  }
+  public static var shadowColor: UIKit.UIColor {
+    get
+  }
+  public static var darkBackgroundColor: UIKit.UIColor {
+    get
+  }
+  public static var lightBackgroundColor: UIKit.UIColor {
+    get
+  }
+  public static var intermidiateBackgroundColor: UIKit.UIColor {
+    get
+  }
+  public static var customDarkTextColor: UIKit.UIColor {
+    get
+  }
+  public static var customLightTextColor: UIKit.UIColor {
+    get
+  }
+  public static var intermidiateTextColor: UIKit.UIColor {
+    get
+  }
+  public static var affirmationColor: UIKit.UIColor {
+    get
+  }
+  public static var negationColor: UIKit.UIColor {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class FrameworkHelper : ObjectiveC.NSObject {
+  public class var shared: FawryPaySDK_AVL.FrameworkHelper? {
+    get
+  }
+  public typealias onCompletion = (FawryPaySDK_AVL.FawrySDKStatusCode?) -> Swift.Void
+  public typealias onPreCompletion = (FawryPaySDK_AVL.FawryError?) -> Swift.Void
+  public typealias onErrorHandler = (FawryPaySDK_AVL.FawryError?) -> Swift.Void
+  public typealias onSuccessHandler = (Any?) -> Swift.Void
+  public typealias onPaymentCompletedHandler = (Any?) -> Swift.Void
+  public var isTransactionFlowFinished: Swift.Bool
+  public func getMerchantReferenceNumber() -> Swift.String
+  public func launchAVL(on baseController: UIKit.UIViewController, isAnimating: Swift.Bool = true, customViewNib: Swift.String? = nil, customViewController: UIKit.UIViewController? = nil, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = AppLanguage.English, currency: Swift.String? = Currency.egp, themeStyle: FawryPaySDK_AVL.ThemeStyleFawryPaySDK? = nil, enable3Ds: Swift.Bool = false, translationDict: Foundation.NSDictionary? = nil, avlAmount: Swift.Double? = nil, avlAmountDataType: FawryPaySDK_AVL.AvlAmountDataType = .decimal, logoImage: UIKit.UIImage? = nil, boldFont: UIKit.UIFont?, regulerFont: UIKit.UIFont?, completionBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onCompletion, onPreCompletionHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPreCompletion, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onPaymentCompletedHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPaymentCompletedHandler, onSuccessHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onSuccessHandler)
+  public func launchCardTokenizer(on baseController: UIKit.UIViewController, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = nil, currency: Swift.String? = Currency.egp, enable3Ds: Swift.Bool = false, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onAddedNewCard: @escaping FawryPaySDK_AVL.AddCardViewController.onAddNewCard, dismissBlock: @escaping FawryPaySDK_AVL.AddCardViewController.onDismiss)
+  public func launchCardManager(on baseController: UIKit.UIViewController, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = nil, currency: Swift.String? = Currency.egp, enable3Ds: Swift.Bool = false, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onAddedNewCard: @escaping FawryPaySDK_AVL.AddCardViewController.onAddNewCard, dismissBlock: @escaping FawryPaySDK_AVL.AddCardViewController.onDismiss)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PaymentDetailsViewController : FawryPaySDK_AVL.BaseViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var buttonBaseView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) open var backgroundView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var headerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var backButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var labelHeader: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var confirmPaymentButton: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
+  @objc @IBAction @_Concurrency.MainActor(unsafe) public func confirmPaymentButtonAction(_ sender: Any? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK_AVL.PaymentDetailsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension FawryPaySDK_AVL.PaymentDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+public enum AddressErrorMessages : Swift.String {
+  case lcoationNotFetched
+  case emptyGovernorate
+  case emptyCity
+  case emptyArea
+  case emptyStreet
+  case emptyBuilding
+  case emptyFloor
+  case emptyApartment
+  case emptyLandmark
+  case emptyFullName
+  case emptyMobileNumber
+  case emptyAddressType
+  case emptyCourier
+  case emptyDeliveryType
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class ValuBillDataModel : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum ErrorCode : Swift.Int {
+  case success
+  case unauthorized
+  case responseCouldNotBeParsed
+  case parametersMissing
+  case internalServerError
+  case noInternet
+  case userCancelled
+  case invalidRequest
+  case validationFailed
+  case failed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ErrorMessages : Swift.String {
+  case responseCouldNotBeParsed
+  case interNetNotAvailable
+  case internalServerError
+  case unauthorized
+  case parametersMissing
+  case userCancelled
+  case invalidRequest
+  case invalidBaseURL
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class FawryError : ObjectiveC.NSObject, Swift.Codable {
+  public var errorCode: Swift.Int?
+  public var message: Swift.String?
+  public var networkError: FawryPaySDK_AVL.NetworkError?
+  public var usedBTC: Swift.Int?
+  public var refNumber: Swift.String?
+  public init(errorCode: Swift.Int?, message: Swift.String?, networkError: FawryPaySDK_AVL.NetworkError?, usedBTC: Swift.Int? = .none, refNumber: Swift.String? = .none)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: FawryPaySDK_AVL.ToastPosition = ToastManager.shared.position, title: Swift.String? = nil, image: UIKit.UIImage? = nil, style: FawryPaySDK_AVL.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func makeToast(_ message: Swift.String?, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreFoundation.CGPoint, title: Swift.String?, image: UIKit.UIImage?, style: FawryPaySDK_AVL.ToastStyle = ToastManager.shared.style, completion: ((_ didTap: Swift.Bool) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, position: FawryPaySDK_AVL.ToastPosition = ToastManager.shared.position, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func showToast(_ toast: UIKit.UIView, duration: Foundation.TimeInterval = ToastManager.shared.duration, point: CoreFoundation.CGPoint, completion: ((_ didTap: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func hideToast()
+  @_Concurrency.MainActor(unsafe) public func hideToast(_ toast: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func hideAllToasts(includeActivity: Swift.Bool = false, clearQueue: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func clearToastQueue()
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ position: FawryPaySDK_AVL.ToastPosition)
+  @_Concurrency.MainActor(unsafe) public func makeToastActivity(_ point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func hideToastActivity()
+  @_Concurrency.MainActor(unsafe) public func toastViewForMessage(_ message: Swift.String?, title: Swift.String?, image: UIKit.UIImage?, style: FawryPaySDK_AVL.ToastStyle) throws -> UIKit.UIView
+}
+public struct ToastStyle {
+  public init()
+  public var backgroundColor: UIKit.UIColor
+  public var titleColor: UIKit.UIColor
+  public var messageColor: UIKit.UIColor
+  public var maxWidthPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var maxHeightPercentage: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var horizontalPadding: CoreFoundation.CGFloat
+  public var verticalPadding: CoreFoundation.CGFloat
+  public var cornerRadius: CoreFoundation.CGFloat
+  public var titleFont: UIKit.UIFont
+  public var messageFont: UIKit.UIFont
+  public var titleAlignment: UIKit.NSTextAlignment
+  public var messageAlignment: UIKit.NSTextAlignment
+  public var titleNumberOfLines: Swift.Int
+  public var messageNumberOfLines: Swift.Int
+  public var displayShadow: Swift.Bool
+  public var shadowColor: UIKit.UIColor
+  public var shadowOpacity: Swift.Float {
+    get
+    set
+  }
+  public var shadowRadius: CoreFoundation.CGFloat
+  public var shadowOffset: CoreFoundation.CGSize
+  public var imageSize: CoreFoundation.CGSize
+  public var activitySize: CoreFoundation.CGSize
+  public var fadeDuration: Swift.Double
+  public var activityIndicatorColor: UIKit.UIColor
+  public var activityBackgroundColor: UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers public class ToastManager {
+  public class var shared: FawryPaySDK_AVL.ToastManager! {
+    get
+  }
+  public var style: FawryPaySDK_AVL.ToastStyle
+  public var isTapToDismissEnabled: Swift.Bool
+  public var isQueueEnabled: Swift.Bool
+  public var duration: Swift.Double
+  public var position: FawryPaySDK_AVL.ToastPosition
+  @objc deinit
+}
+public enum ToastPosition {
+  case top
+  case center
+  case bottom
+  public static func == (a: FawryPaySDK_AVL.ToastPosition, b: FawryPaySDK_AVL.ToastPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension FawryPaySDK_AVL.DisplayType : Swift.Equatable {}
+extension FawryPaySDK_AVL.DisplayType : Swift.Hashable {}
+extension FawryPaySDK_AVL.DisplayType : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.KeyboardType : Swift.Equatable {}
+extension FawryPaySDK_AVL.KeyboardType : Swift.Hashable {}
+extension FawryPaySDK_AVL.KeyboardType : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.MWalletOption : Swift.Equatable {}
+extension FawryPaySDK_AVL.MWalletOption : Swift.Hashable {}
+extension FawryPaySDK_AVL.AvlAmountDataType : Swift.Equatable {}
+extension FawryPaySDK_AVL.AvlAmountDataType : Swift.Hashable {}
+extension FawryPaySDK_AVL.ServiceTypeCode : Swift.Equatable {}
+extension FawryPaySDK_AVL.ServiceTypeCode : Swift.Hashable {}
+extension FawryPaySDK_AVL.ServiceTypeCode : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.Payment_Method : Swift.Equatable {}
+extension FawryPaySDK_AVL.Payment_Method : Swift.Hashable {}
+extension FawryPaySDK_AVL.Payment_Method : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.PaymentMethod : Swift.Equatable {}
+extension FawryPaySDK_AVL.PaymentMethod : Swift.Hashable {}
+extension FawryPaySDK_AVL.PaymentMethod : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.WalletPaymentMethods : Swift.Equatable {}
+extension FawryPaySDK_AVL.WalletPaymentMethods : Swift.Hashable {}
+extension FawryPaySDK_AVL.WalletPaymentMethods : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.PaymentURLs : Swift.Equatable {}
+extension FawryPaySDK_AVL.PaymentURLs : Swift.Hashable {}
+extension FawryPaySDK_AVL.PaymentURLs : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.SDKMode : Swift.Equatable {}
+extension FawryPaySDK_AVL.SDKMode : Swift.Hashable {}
+extension FawryPaySDK_AVL.SDKMode : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.ViewType : Swift.Equatable {}
+extension FawryPaySDK_AVL.ViewType : Swift.Hashable {}
+extension FawryPaySDK_AVL.ViewType : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.FawrySDKResponseCode : Swift.Equatable {}
+extension FawryPaySDK_AVL.FawrySDKResponseCode : Swift.Hashable {}
+extension FawryPaySDK_AVL.FawrySDKResponseCode : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.FawrySDKStatusCode : Swift.Equatable {}
+extension FawryPaySDK_AVL.FawrySDKStatusCode : Swift.Hashable {}
+extension FawryPaySDK_AVL.FawrySDKStatusCode : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.SectionType : Swift.Equatable {}
+extension FawryPaySDK_AVL.SectionType : Swift.Hashable {}
+extension FawryPaySDK_AVL.NetworkError : Swift.Equatable {}
+extension FawryPaySDK_AVL.NetworkError : Swift.Hashable {}
+extension FawryPaySDK_AVL.AddressErrorMessages : Swift.Equatable {}
+extension FawryPaySDK_AVL.AddressErrorMessages : Swift.Hashable {}
+extension FawryPaySDK_AVL.AddressErrorMessages : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.ErrorCode : Swift.Equatable {}
+extension FawryPaySDK_AVL.ErrorCode : Swift.Hashable {}
+extension FawryPaySDK_AVL.ErrorCode : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.ErrorMessages : Swift.Equatable {}
+extension FawryPaySDK_AVL.ErrorMessages : Swift.Hashable {}
+extension FawryPaySDK_AVL.ErrorMessages : Swift.RawRepresentable {}
+extension FawryPaySDK_AVL.ToastPosition : Swift.Equatable {}
+extension FawryPaySDK_AVL.ToastPosition : Swift.Hashable {}

@@ -1,11 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FawryPaySDK_AVL
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FawryPaySDK_AVL
 import AVFoundation
 import Alamofire
 import CommonCrypto
 import CryptoKit
+import DeveloperToolsSupport
 import Foundation
 import IQKeyboardManagerSwift
 import MBRadioButton
@@ -13,10 +13,12 @@ import ObjectiveC
 import RxSwift
 import Swift
 import SwiftMessages
+import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public class CardDetailsModel : Swift.Codable {
   public var cardNumber: Swift.String?
   public var cardExpiryMonth: Swift.String?
@@ -220,6 +222,15 @@ public protocol ViewModelPressible {
   public func getAppLanguage() -> Swift.String
   @objc override dynamic public init()
   @objc deinit
+}
+public enum AvlAmountDataType {
+  case integer
+  case decimal
+  public static func == (a: FawryPaySDK_AVL.AvlAmountDataType, b: FawryPaySDK_AVL.AvlAmountDataType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 extension Foundation.Data {
   public func sha256() -> Swift.String
@@ -562,7 +573,7 @@ extension UIKit.UIColor {
   public typealias onPaymentCompletedHandler = (Any?) -> Swift.Void
   public var isTransactionFlowFinished: Swift.Bool
   public func getMerchantReferenceNumber() -> Swift.String
-  public func launchAVL(on baseController: UIKit.UIViewController, isAnimating: Swift.Bool = true, customViewNib: Swift.String? = nil, customViewController: UIKit.UIViewController? = nil, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = AppLanguage.English, currency: Swift.String? = Currency.egp, themeStyle: FawryPaySDK_AVL.ThemeStyleFawryPaySDK? = nil, enable3Ds: Swift.Bool = false, translationDict: Foundation.NSDictionary? = nil, avlAmount: Swift.Double? = nil, logoImage: UIKit.UIImage? = nil, boldFont: UIKit.UIFont?, regulerFont: UIKit.UIFont?, completionBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onCompletion, onPreCompletionHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPreCompletion, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onPaymentCompletedHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPaymentCompletedHandler, onSuccessHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onSuccessHandler)
+  public func launchAVL(on baseController: UIKit.UIViewController, isAnimating: Swift.Bool = true, customViewNib: Swift.String? = nil, customViewController: UIKit.UIViewController? = nil, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = AppLanguage.English, currency: Swift.String? = Currency.egp, themeStyle: FawryPaySDK_AVL.ThemeStyleFawryPaySDK? = nil, enable3Ds: Swift.Bool = false, translationDict: Foundation.NSDictionary? = nil, avlAmount: Swift.Double? = nil, avlAmountDataType: FawryPaySDK_AVL.AvlAmountDataType = .decimal, logoImage: UIKit.UIImage? = nil, boldFont: UIKit.UIFont?, regulerFont: UIKit.UIFont?, completionBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onCompletion, onPreCompletionHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPreCompletion, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onPaymentCompletedHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onPaymentCompletedHandler, onSuccessHandler: @escaping FawryPaySDK_AVL.FrameworkHelper.onSuccessHandler)
   public func launchCardTokenizer(on baseController: UIKit.UIViewController, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = nil, currency: Swift.String? = Currency.egp, enable3Ds: Swift.Bool = false, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onAddedNewCard: @escaping FawryPaySDK_AVL.AddCardViewController.onAddNewCard, dismissBlock: @escaping FawryPaySDK_AVL.AddCardViewController.onDismiss)
   public func launchCardManager(on baseController: UIKit.UIViewController, launchModel: FawryPaySDK_AVL.FawryLaunchModel? = nil, baseURL: Swift.String? = nil, appLanguage: Swift.String? = nil, currency: Swift.String? = Currency.egp, enable3Ds: Swift.Bool = false, errorBlock: @escaping FawryPaySDK_AVL.FrameworkHelper.onErrorHandler, onAddedNewCard: @escaping FawryPaySDK_AVL.AddCardViewController.onAddNewCard, dismissBlock: @escaping FawryPaySDK_AVL.AddCardViewController.onDismiss)
   @objc override dynamic public init()
@@ -744,6 +755,8 @@ extension FawryPaySDK_AVL.KeyboardType : Swift.Hashable {}
 extension FawryPaySDK_AVL.KeyboardType : Swift.RawRepresentable {}
 extension FawryPaySDK_AVL.MWalletOption : Swift.Equatable {}
 extension FawryPaySDK_AVL.MWalletOption : Swift.Hashable {}
+extension FawryPaySDK_AVL.AvlAmountDataType : Swift.Equatable {}
+extension FawryPaySDK_AVL.AvlAmountDataType : Swift.Hashable {}
 extension FawryPaySDK_AVL.ServiceTypeCode : Swift.Equatable {}
 extension FawryPaySDK_AVL.ServiceTypeCode : Swift.Hashable {}
 extension FawryPaySDK_AVL.ServiceTypeCode : Swift.RawRepresentable {}
