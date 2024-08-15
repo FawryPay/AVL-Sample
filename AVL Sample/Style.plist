@@ -20,5 +20,9 @@
 	<string>00FFFF</string>
 	<key>fawry_black_Hex</key>
 	<string>00FFFF</string>
+	<key>fawry_title_PaymentDetails_Hex</key>
+	<string>00FFFF</string>
+	<key>fawry_Button_background_Hex</key>
+	<string>FFFFFF</string>
 </dict>
 </plist>

@@ -350,7 +350,8 @@ public class FawryLaunchModel : Swift.Codable {
   public var billingAcct: Swift.String?
   public var billTypeCode: Swift.Int?
   public var paymentWithCardToken: Swift.Bool?
-  public init(customer: FawryPaySDK_AVL.LaunchCustomerModel?, merchant: FawryPaySDK_AVL.LaunchMerchantModel?, signature: Swift.String?, paymentWithCardToken: Swift.Bool? = false, paymentMethod: FawryPaySDK_AVL.Payment_Method = .all, avlInfo: FawryPaySDK_AVL.AVLInfo?, customerProfileId: Swift.String? = .none, apiPath: Swift.String?, chargeItems: [FawryPaySDK_AVL.ChargeItemsParamsModel]? = nil)
+  public var showZeroFeesView: Swift.Bool?
+  public init(customer: FawryPaySDK_AVL.LaunchCustomerModel?, merchant: FawryPaySDK_AVL.LaunchMerchantModel?, signature: Swift.String?, paymentWithCardToken: Swift.Bool? = false, paymentMethod: FawryPaySDK_AVL.Payment_Method = .all, avlInfo: FawryPaySDK_AVL.AVLInfo?, customerProfileId: Swift.String? = .none, apiPath: Swift.String?, chargeItems: [FawryPaySDK_AVL.ChargeItemsParamsModel]? = nil, showZeroFeesView: Swift.Bool? = true)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -399,6 +400,7 @@ public enum FawrySDKStatusCode : Swift.Int {
   case sdkNotIntitalized
   case paramterMissing
   case contollerNotFound
+  case userDidBack
   case missingParamAppLanguage
   case missingParambaseUrl
   case missingParamCustomerModel

@@ -14,8 +14,8 @@
             filePath = "AVL Sample/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "seamlessAVLAction(_:)"
             landmarkType = "7">
             <Locations>
@@ -64,6 +64,21 @@
                   endingLineNumber = "100"
                   offsetFromSymbolStart = "922">
                </Location>
+               <Location
+                  uuid = "7E3A9AD8-E468-4540-A1AC-91EC5891DB48 - 927b08e67615b2cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AVL_Sample.ViewController.seamlessAVLAction(Any) -&gt; ()"
+                  moduleName = "AVL Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sameh/Desktop/sampleWE/IOS-Fawrypay-AVL-Sample/AVL%20Sample/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "922">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -77,8 +92,8 @@
             filePath = "AVL Sample/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "seamlessAVLAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -93,8 +108,8 @@
             filePath = "AVL Sample/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "seamlessAVLAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,8 +124,8 @@
             filePath = "AVL Sample/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "seamlessAVLAction(_:)"
             landmarkType = "7">
          </BreakpointContent>

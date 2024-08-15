@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func ShowPayment(_ sender: UIButton) {
         
-        let avlInfo = AVLInfo(length: 6 , btcWithFees: 4933, btcWithoutFees: 4428 , pans: ["512345"], avlFeesOffUs: 7.7, avlFeesOnUs: 5.0)
+        let avlInfo = AVLInfo(length: 6 , btcWithFees: 4933, btcWithoutFees: 4428 , pans: ["512345"], avlFeesOffUs: 0, avlFeesOnUs: 0)
         
         let customerInfo = LaunchCustomerModel(customerName: "Ahmed", customerEmail: "ahmedamrsharf@gmail.com", customerMobile: "01127927617", customerProfileId: "71917")
         
@@ -30,7 +30,8 @@ class ViewController: UIViewController {
                                            signature: nil,
                                            paymentWithCardToken: false,
                                            avlInfo: avlInfo,
-                                           apiPath: "ECommerceWeb/api/")
+                                           apiPath: "ECommerceWeb/api/",
+                                           showZeroFeesView: true)
         
         launchModel.skipReceipt = true
         
