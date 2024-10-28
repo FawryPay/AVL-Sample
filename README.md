@@ -89,8 +89,11 @@ AVLInfo
 | btcWithFees       | Int      | required     | \-                                                | 4933                                               |
 | btcWithoutFees    | Int      | required     | \-                                                | 4428                                               |
 | pans              | [String] | required     | BANs related to the bank to use the btcWithoutFees| [“512345”]                                         | 
-| avlFeesOffUs              | double | optional     |  - |  7.7  
-| avlFeesOnUs              | double | optional     | - |  5.0  
+| avlFeesOffUs              | Double (should be maximum 2 digits after the decimal point, if the value is more than 2 digits after the decimal point it will be trimmed to 2 digits after the decimal point)	 | optional     |  - |  7.7  
+| avlFeesOnUs              | Double (should be maximum 2 digits after the decimal point, if the value is more than 2 digits after the decimal point it will be trimmed to 2 digits after the decimal point)	 | optional     | - |  5.0  
+| minValue              | Double| optional     | - |  5.0  
+| maxValue              | Double| optional     | - |  50.0  
+
 
 
 FawryLaunchModel
